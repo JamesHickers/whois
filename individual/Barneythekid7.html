@@ -2,40 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="robots" content="index, follow">
-
-  <meta
-    name="description"
-    content="WHOIS profile for BarneyTheKid7 covering development history, Windows and systems interests, Roblox development, Krynet Community, security experimentation, and public projects."
-  >
-
-  <meta
-    name="keywords"
-    content="BarneyTheKid7, Barney, WHOIS, Windows, Developer, Roblox, Lua, Web Development, Cybersecurity, Krynet Community"
-  >
-
+  <meta name="description" content="BarneyTheKid7 — developer, Roblox creator, programmer, and owner of Krynet Community.">
+  <meta name="keywords" content="BarneyTheKid7, Barney, Roblox, Developer, Programmer, Krynet Community, Software">
   <meta name="author" content="BarneyTheKid7">
 
-  <title>WHOIS — BarneyTheKid7</title>
-
-  <link rel="stylesheet" href="styles.css">
+  <title>BarneyTheKid7 | Developer Profile</title>
 
   <style>
-    :root {
-      --bg: #0b0e13;
-      --panel: #121722;
-      --panel-alt: #0e131c;
-      --text: #e6e8ee;
-      --muted: #9aa3b2;
-      --accent: #7aa2ff;
-      --border: #1f2937;
-      --danger: #f28d8d;
-      --warning: #e5c07b;
-      --success: #8dd6a7;
-    }
-
     * {
       box-sizing: border-box;
     }
@@ -46,82 +22,80 @@
 
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-      line-height: 1.6;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #121212;
+      color: #eee;
+      line-height: 1.7;
     }
 
-    header {
-      padding: 36px 32px;
-      border-bottom: 1px solid var(--border);
-      background:
-        linear-gradient(180deg, #0e1320, #0b0e13);
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem 2.5rem;
+      background: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #ff6f61aa;
     }
 
-    header h1 {
-      max-width: 1100px;
-      margin: 0 auto;
-      font-size: 2.1rem;
-      letter-spacing: .04em;
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
     }
 
-    header p {
-      max-width: 1100px;
-      margin: 8px auto 0;
-      color: var(--muted);
+    h1 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      color: #ff6f61;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 2.5rem;
     }
 
-    main {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 32px;
-    }
-
-    section {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-
-    section h2 {
-      margin: 0 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-      font-size: 1.25rem;
-    }
-
-    section h3 {
-      margin-top: 24px;
-      color: var(--accent);
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #ff6f61;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     p {
-      color: var(--text);
+      font-size: 1.05rem;
+      color: #ddd;
     }
 
-    .muted {
-      color: var(--muted);
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: #181818;
+      border-radius: 10px;
+      border: 1px solid #292929;
     }
 
     ul {
-      padding-left: 22px;
+      list-style-type: square;
+      padding-left: 1.4rem;
+      margin-bottom: 0;
+      color: #ccc;
     }
 
     li {
-      margin-bottom: 7px;
+      margin-bottom: 0.7rem;
+    }
+
+    strong {
+      color: #fff;
     }
 
     a {
-      color: var(--accent);
+      color: #58a6ff;
       text-decoration: none;
     }
 
@@ -129,132 +103,68 @@
       text-decoration: underline;
     }
 
-    strong {
-      color: #fff;
+    button {
+      display: block;
+      margin: 1rem auto 1.5rem auto;
+      padding: 0.6rem 1.4rem;
+      background: #ff6f61;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #121212;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff6f6155;
+      transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff5445;
+      box-shadow: 0 0 15px #ff544555;
+    }
+
+    .hidden-section {
+      display: none;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    .visible-section {
+      display: block;
     }
 
     .classification {
       display: inline-block;
-      padding: 4px 9px;
-      margin: 3px 4px 3px 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--muted);
-      font-size: .85rem;
-    }
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .profile-item {
-      padding: 14px;
-      background: var(--panel-alt);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-    }
-
-    .profile-item .label {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--muted);
-      font-size: .85rem;
-    }
-
-    .status {
-      font-weight: 700;
-    }
-
-    .status-active {
-      color: var(--success);
-    }
-
-    .status-historical {
-      color: var(--warning);
-    }
-
-    .timeline {
-      border-left: 2px solid var(--border);
-      padding-left: 20px;
-    }
-
-    .timeline-item {
-      margin-bottom: 22px;
-    }
-
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-item strong {
-      color: var(--accent);
-    }
-
-    .project-card {
-      background: var(--panel-alt);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 18px;
-      margin-top: 16px;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-
-    .risk {
-      padding: 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--panel-alt);
-      margin-top: 16px;
-    }
-
-    .risk-low {
-      color: var(--success);
-      font-weight: 700;
-    }
-
-    .risk-moderate {
-      color: var(--warning);
-      font-weight: 700;
-    }
-
-    .redacted {
-      background: #000;
-      color: #555;
-      text-align: center;
-      padding: 18px;
-      border-radius: 6px;
-      letter-spacing: .25em;
-      overflow: hidden;
+      margin: 0.2rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid #444;
+      border-radius: 5px;
+      color: #bbb;
+      font-size: 0.9rem;
     }
 
     footer {
-      padding: 28px;
-      border-top: 1px solid var(--border);
       text-align: center;
-      color: var(--muted);
-      font-size: .9rem;
+      color: #777;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #292929;
     }
 
     @media (max-width: 700px) {
-      header {
-        padding: 28px 18px;
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
       }
 
-      main {
-        padding: 20px 16px;
+      h1 {
+        font-size: 2rem;
       }
 
-      .profile-grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 20px;
+      h2 {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -262,652 +172,373 @@
 
 <body>
 
-<header>
-  <h1>WHOIS — BarneyTheKid7</h1>
+<div class="container">
 
-  <p>
-    Independent Developer • Windows-Focused • Roblox / Web Development •
-    Krynet Community Owner
+  <h1>BarneyTheKid7</h1>
+
+  <p class="intro">
+    Developer, Roblox creator, programmer, and owner of Krynet Community.
+    Interested in computers, software, programming, and building things
+    independently.
   </p>
-</header>
-
-<main>
-
-  <!-- =========================
-       IDENTITY
-  ========================== -->
 
   <section>
-    <h2>Identity Overview</h2>
+    <h2>About Barney</h2>
 
-    <div class="profile-grid">
+    <button
+      type="button"
+      onclick="toggleVisibility('about')">
+      Show More
+    </button>
 
-      <div class="profile-item">
-        <span class="label">Primary Handle</span>
-        <strong>BarneyTheKid7</strong>
-      </div>
+    <div id="about" class="hidden-section">
 
-      <div class="profile-item">
-        <span class="label">Known Name</span>
-        <strong>Barney</strong>
-      </div>
+      <ul>
+        <li>
+          <strong>Name:</strong>
+          Barney
+        </li>
 
-      <div class="profile-item">
-        <span class="label">Real-World Identity</span>
-        <span class="muted">Not publicly disclosed</span>
-      </div>
+        <li>
+          <strong>Primary Handle:</strong>
+          BarneyTheKid7
+        </li>
 
-      <div class="profile-item">
-        <span class="label">Primary Technical Identity</span>
-        <strong>Windows / PC / Software</strong>
-      </div>
+        <li>
+          <strong>Work:</strong>
+          Works at Food City
+        </li>
 
-      <div class="profile-item">
-        <span class="label">Development Background</span>
-        <strong>Independent / Self-Taught</strong>
-      </div>
+        <li>
+          <strong>Development:</strong>
+          Roblox development and programming
+        </li>
 
-      <div class="profile-item">
-        <span class="label">Current Status</span>
-        <span class="status status-active">ACTIVE</span>
-      </div>
+        <li>
+          <strong>Organization:</strong>
+          Owner of
+          <a
+            href="https://github.com/Krynet-Community"
+            target="_blank"
+            rel="noopener noreferrer">
+            Krynet Community
+          </a>
+        </li>
+
+        <li>
+          <strong>Technical Interests:</strong>
+          Computers, programming, software, and building projects
+        </li>
+
+        <li>
+          <strong>Primary Desktop Environment:</strong>
+          Windows and Chrome
+        </li>
+      </ul>
 
     </div>
-
-    <p>
-      BarneyTheKid7 is an independent developer and technical hobbyist
-      associated with Windows computing, Roblox development, software
-      experimentation, web projects, and cybersecurity-related interests.
-    </p>
-
-    <p>
-      The identity is also associated with the
-      <strong>Krynet Community</strong>, an independent community
-      organization separate from Krynet, LLC.
-    </p>
   </section>
 
+  <section>
+    <h2>Development</h2>
 
-  <!-- =========================
-       KRYNET COMMUNITY
-  ========================== -->
+    <button
+      type="button"
+      onclick="toggleVisibility('development')">
+      Show Development Details
+    </button>
+
+    <div id="development" class="hidden-section">
+
+      <ul>
+        <li>
+          <strong>Roblox:</strong>
+          Actively works on Roblox projects.
+        </li>
+
+        <li>
+          <strong>Programming:</strong>
+          Builds software and experiments with code.
+        </li>
+
+        <li>
+          <strong>Project Style:</strong>
+          Prefers experimenting and building things directly rather than
+          following convention for its own sake.
+        </li>
+
+        <li>
+          <strong>Code Preference:</strong>
+          Favors readable, straightforward implementations and
+          understanding how the complete system works.
+        </li>
+
+        <li>
+          <strong>Approach:</strong>
+          Values experimentation, independence, and learning through
+          actually building things.
+        </li>
+      </ul>
+
+    </div>
+  </section>
 
   <section>
     <h2>Krynet Community</h2>
 
-    <div class="project-card">
+    <button
+      type="button"
+      onclick="toggleVisibility('krynet')">
+      Show Krynet Details
+    </button>
 
-      <h3>Krynet Community</h3>
-
-      <p>
-        Barney is the owner of the independent
-        <strong>Krynet Community</strong> organization.
-      </p>
-
-      <p>
-        <a
-          href="https://github.com/Krynet-Community"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub — Krynet Community
-        </a>
-      </p>
+    <div id="krynet" class="hidden-section">
 
       <ul>
-        <li><strong>Organization:</strong> Krynet Community</li>
-        <li><strong>Role:</strong> Owner</li>
-        <li><strong>Platform:</strong> GitHub</li>
-        <li><strong>Focus:</strong> Community, software, documentation, experimentation, and technical projects</li>
-        <li><strong>Affiliation:</strong> Independent community organization</li>
+        <li>
+          <strong>Organization:</strong>
+          Krynet Community
+        </li>
+
+        <li>
+          <strong>Role:</strong>
+          Owner
+        </li>
+
+        <li>
+          <strong>GitHub:</strong>
+          <a
+            href="https://github.com/Krynet-Community"
+            target="_blank"
+            rel="noopener noreferrer">
+            github.com/Krynet-Community
+          </a>
+        </li>
+
+        <li>
+          <strong>Independence:</strong>
+          Krynet Community is separate from Krynet, LLC.
+        </li>
       </ul>
 
-      <p class="muted">
-        Krynet Community should not be treated as Krynet, LLC or as an
-        official corporate entity of Krynet, LLC.
-      </p>
-
     </div>
   </section>
 
-
-  <!-- =========================
-       DEVELOPMENT HISTORY
-  ========================== -->
-
   <section>
-    <h2>Development History</h2>
+    <h2>Technology & Software</h2>
 
-    <div class="timeline">
+    <button
+      type="button"
+      onclick="toggleVisibility('technology')">
+      Show Technology Details
+    </button>
 
-      <div class="timeline-item">
-        <strong>Roblox Development</strong>
-
-        <p>
-          Early development activity centered around Roblox,
-          including Lua scripting, game experimentation, assets,
-          scripts, and modifications to existing projects.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Independent Software Experimentation</strong>
-
-        <p>
-          Development interests expanded beyond Roblox into web
-          development, utilities, automation, scripting, and general
-          software experimentation.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Windows / PC Focus</strong>
-
-        <p>
-          Windows became the primary computing environment and remains
-          the dominant part of the subject's personal computing identity.
-          Hardware, Windows software, compatibility, system behavior,
-          and PC experimentation are recurring interests.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Security Interest</strong>
-
-        <p>
-          Technical interests expanded into cybersecurity, code
-          analysis, privacy, system security, networking, and
-          experimentation with security-related software.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <strong>Community Development</strong>
-
-        <p>
-          The subject subsequently became involved in maintaining and
-          organizing the independent Krynet Community ecosystem.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- =========================
-       TECHNICAL PROFILE
-  ========================== -->
-
-  <section>
-    <h2>Technical Profile</h2>
-
-    <p>
-      Barney's technical interests are broad and experimental, with
-      Windows and PC computing forming the primary environment.
-    </p>
-
-    <p>
-      <span class="classification">Windows</span>
-      <span class="classification">PC Hardware</span>
-      <span class="classification">Roblox</span>
-      <span class="classification">Lua</span>
-      <span class="classification">Python</span>
-      <span class="classification">C++</span>
-      <span class="classification">Rust</span>
-      <span class="classification">JavaScript</span>
-      <span class="classification">TypeScript</span>
-      <span class="classification">Web Development</span>
-      <span class="classification">Cybersecurity</span>
-      <span class="classification">Privacy</span>
-    </p>
-
-    <ul>
-      <li>Windows systems and PC hardware</li>
-      <li>Software development and experimentation</li>
-      <li>Roblox development and Lua scripting</li>
-      <li>Web development</li>
-      <li>Automation and scripting</li>
-      <li>System administration and troubleshooting</li>
-      <li>Networking</li>
-      <li>Cybersecurity research</li>
-      <li>Code auditing and analysis</li>
-      <li>Privacy-oriented technology</li>
-    </ul>
-  </section>
-
-
-  <!-- =========================
-       WINDOWS
-  ========================== -->
-
-  <section>
-    <h2>Operating System Profile</h2>
-
-    <div class="project-card">
-
-      <h3>Primary Platform: Windows</h3>
-
-      <p>
-        Windows is the subject's primary operating-system environment
-        and a major part of his computing identity.
-      </p>
+    <div id="technology" class="hidden-section">
 
       <ul>
-        <li>Windows-focused daily computing</li>
-        <li>Windows software and compatibility</li>
-        <li>PC hardware experimentation</li>
-        <li>Windows troubleshooting</li>
-        <li>Windows security configuration</li>
-        <li>Software development on Windows</li>
+        <li>
+          <strong>Operating System:</strong>
+          Windows
+        </li>
+
+        <li>
+          <strong>Browser:</strong>
+          Chrome
+        </li>
+
+        <li>
+          <strong>Computers:</strong>
+          Strong interest in computer hardware and software.
+        </li>
+
+        <li>
+          <strong>Programming:</strong>
+          Software development and experimentation.
+        </li>
+
+        <li>
+          <strong>Roblox Development:</strong>
+          Game and project development within the Roblox ecosystem.
+        </li>
       </ul>
 
-      <p class="muted">
-        Linux experience may exist as part of technical experimentation,
-        but Barney should not be classified as Linux-exclusive or
-        Linux-primary.
-      </p>
-
     </div>
   </section>
 
-
-  <!-- =========================
-       SECURITY
-  ========================== -->
-
   <section>
-    <h2>Security & Privacy Interests</h2>
+    <h2>Software Philosophy</h2>
 
-    <p>
-      Security is an area of technical interest rather than a complete
-      description of the subject's identity.
-    </p>
+    <button
+      type="button"
+      onclick="toggleVisibility('philosophy')">
+      Show Philosophy
+    </button>
 
-    <ul>
-      <li>Cybersecurity experimentation</li>
-      <li>Code auditing</li>
-      <li>Vulnerability analysis</li>
-      <li>Software security</li>
-      <li>Privacy technology</li>
-      <li>Network security</li>
-      <li>Authentication security</li>
-      <li>Sandboxing and isolation</li>
-      <li>Security-focused programming</li>
-    </ul>
-
-    <div class="risk">
-      <strong>Security Interest:</strong>
-      <span class="risk-moderate">HIGH</span>
-
-      <br><br>
-
-      <span class="muted">
-        Technical security interest does not by itself establish
-        malicious intent or current malicious activity.
-      </span>
-    </div>
-  </section>
-
-
-  <!-- =========================
-       BARNEY.SS
-  ========================== -->
-
-  <section>
-    <h2>Historical Projects</h2>
-
-    <div class="project-card">
-
-      <h3>Barney.SS</h3>
-
-      <p>
-        <a
-          href="https://github.com/JamesHickers/Barney-SS"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub — Barney-SS
-        </a>
-      </p>
+    <div id="philosophy" class="hidden-section">
 
       <ul>
-        <li><strong>Project:</strong> Barney.SS</li>
-        <li><strong>Environment:</strong> Roblox</li>
-        <li><strong>Primary Language:</strong> Lua</li>
-        <li><strong>Repository Status:</strong> Archived / No longer maintained</li>
-        <li><strong>Repository Files:</strong> Barney.SS.Loader.lua, Barney.SS.rbxm</li>
-        <li><strong>License:</strong> MIT</li>
+        <li>
+          Values curiosity and experimentation.
+        </li>
+
+        <li>
+          Prefers making projects independently.
+        </li>
+
+        <li>
+          Likes understanding the underlying system instead of hiding
+          everything behind layers of abstraction.
+        </li>
+
+        <li>
+          Prefers simple and readable implementations.
+        </li>
+
+        <li>
+          Values practical results and learning through experimentation.
+        </li>
+
+        <li>
+          Does not consider conventional "best practices" automatically
+          superior simply because they are conventional.
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Online Presence</h2>
+
+    <button
+      type="button"
+      onclick="toggleVisibility('presence')">
+      Show Links
+    </button>
+
+    <div id="presence" class="hidden-section">
+
+      <ul>
+        <li>
+          <strong>Krynet Community GitHub:</strong>
+          <a
+            href="https://github.com/Krynet-Community"
+            target="_blank"
+            rel="noopener noreferrer">
+            Krynet-Community
+          </a>
+        </li>
+
+        <li>
+          <strong>Barney-SS:</strong>
+          <a
+            href="https://github.com/JamesHickers/Barney-SS"
+            target="_blank"
+            rel="noopener noreferrer">
+            Barney-SS on GitHub
+          </a>
+        </li>
       </ul>
 
       <p>
-        Barney.SS was a historical Roblox backdoor project associated
-        with the BarneyTheKid7 identity.
+        Barney-SS is a project associated with Barney. The backdoor
+        implementation is based on the Barney SS backdoor kit created by
+        4zx16; this association should not be interpreted as making
+        Barney and 4zx16 the same person.
       </p>
-
-      <p>
-        The underlying backdoor functionality was based on the
-        <strong>Blood-Gang-Inc Backdoor</strong> source / kit. The
-        repository itself explicitly identifies that source and describes
-        Barney.SS as an old backdoor that is no longer maintained.
-        :contentReference[oaicite:1]{index=1}
-      </p>
-
-      <p>
-        In the context of this profile, the project is therefore
-        classified as <strong>historical security-adjacent Roblox
-        experimentation</strong>, rather than presented as a current
-        project.
-      </p>
-
-      <div class="risk">
-        <strong>Project Status:</strong>
-        <span class="status status-historical">HISTORICAL / ARCHIVED</span>
-
-        <br><br>
-
-        <strong>Current Maintenance:</strong>
-        <span class="muted">None</span>
-      </div>
 
     </div>
   </section>
-
-
-  <!-- =========================
-       ROBLOX
-  ========================== -->
-
-  <section>
-    <h2>Roblox Background</h2>
-
-    <p>
-      Roblox is an important part of Barney's earlier development
-      history and remains relevant to his technical background.
-    </p>
-
-    <ul>
-      <li>Lua scripting</li>
-      <li>Game development</li>
-      <li>Game-system experimentation</li>
-      <li>Script analysis</li>
-      <li>Asset experimentation</li>
-      <li>Roblox security experimentation</li>
-      <li>Historical server-side scripting projects</li>
-    </ul>
-  </section>
-
-
-  <!-- =========================
-       WEB DEVELOPMENT
-  ========================== -->
-
-  <section>
-    <h2>Web Development</h2>
-
-    <ul>
-      <li>HTML and CSS</li>
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>Interactive web applications</li>
-      <li>Developer tooling</li>
-      <li>Static sites and project pages</li>
-      <li>Client-side experimentation</li>
-    </ul>
-
-    <p>
-      Web development is used primarily as a practical tool for
-      building projects, interfaces, documentation, and technical
-      experiments rather than as the sole focus of the subject's work.
-    </p>
-  </section>
-
-
-  <!-- =========================
-       DEVELOPMENT PHILOSOPHY
-  ========================== -->
-
-  <section>
-    <h2>Development Philosophy</h2>
-
-    <ul>
-      <li>Prefers readable and understandable implementations</li>
-      <li>Values simple, self-contained software</li>
-      <li>Dislikes unnecessary abstraction</li>
-      <li>Prefers understanding the underlying system</li>
-      <li>Enjoys experimentation</li>
-      <li>Values practical functionality</li>
-      <li>Prioritizes accuracy over convention</li>
-      <li>Comfortable learning through experimentation</li>
-      <li>Frequently approaches systems from a technical and security perspective</li>
-    </ul>
-  </section>
-
-
-  <!-- =========================
-       WORKING STYLE
-  ========================== -->
-
-  <section>
-    <h2>Working Style</h2>
-
-    <ul>
-      <li>Independent technical workflow</li>
-      <li>Hands-on experimentation</li>
-      <li>Strong interest in understanding how systems work</li>
-      <li>Comfortable troubleshooting unusual technical problems</li>
-      <li>Prefers direct control over software and hardware</li>
-      <li>Moves between programming, systems, and security topics</li>
-      <li>Frequently builds things for experimentation and learning</li>
-    </ul>
-  </section>
-
-
-  <!-- =========================
-       PUBLIC PRESENCE
-  ========================== -->
-
-  <section>
-    <h2>Public Online Presence</h2>
-
-    <ul>
-      <li>BarneyTheKid7 developer identity</li>
-      <li>GitHub and software projects</li>
-      <li>Roblox development history</li>
-      <li>Krynet Community organization</li>
-      <li>Technical documentation and project repositories</li>
-    </ul>
-
-    <p>
-      The public identity primarily revolves around software,
-      computing, community projects, and technical experimentation.
-    </p>
-
-    <div class="risk">
-      <strong>Public Exposure:</strong>
-      <span class="risk-moderate">MODERATE</span>
-
-      <br>
-
-      <strong>Technical Footprint:</strong>
-      <span class="risk-moderate">MODERATE–HIGH</span>
-    </div>
-  </section>
-
-
-  <!-- =========================
-       IDENTITY SEPARATION
-  ========================== -->
 
   <section>
     <h2>Identity Separation</h2>
 
-    <p>
-      This profile intentionally distinguishes BarneyTheKid7 from
-      other individuals and aliases appearing in related technical
-      communities.
-    </p>
+    <button
+      type="button"
+      onclick="toggleVisibility('identity')">
+      Show Identity Notes
+    </button>
 
-    <ul>
-      <li><strong>BarneyTheKid7:</strong> This profile</li>
-      <li><strong>4zx16:</strong> Separate individual</li>
-      <li><strong>7zh14:</strong> Separate individual</li>
-      <li><strong>Sophia:</strong> Separate individual</li>
-      <li><strong>Krynet Community:</strong> Independent community organization</li>
-      <li><strong>Krynet, LLC:</strong> Separate organization</li>
-    </ul>
+    <div id="identity" class="hidden-section">
 
-    <p class="muted">
-      Projects, hardware, operating systems, aliases, personal
-      characteristics, and technical histories belonging to those
-      separate identities should not automatically be attributed to
-      BarneyTheKid7.
-    </p>
-  </section>
+      <p>
+        BarneyTheKid7 is a distinct identity and should not be conflated
+        with 4zx16, Sophia, or 7zh14.
+      </p>
 
+      <ul>
+        <li>
+          <strong>Barney:</strong>
+          Owner of Krynet Community.
+        </li>
 
-  <!-- =========================
-       PRIVACY
-  ========================== -->
+        <li>
+          <strong>4zx16:</strong>
+          Separate individual.
+        </li>
 
-  <section>
-    <h2>Public Information Boundaries</h2>
+        <li>
+          <strong>7zh14:</strong>
+          Separate individual.
+        </li>
 
-    <p>
-      Information that is unnecessary for identifying the public
-      developer profile is intentionally excluded.
-    </p>
+        <li>
+          <strong>Sophia:</strong>
+          Separate individual.
+        </li>
+      </ul>
 
-    <div class="redacted">
-      PRIVATE / NON-ESSENTIAL INFORMATION WITHHELD
-    </div>
+      <p>
+        References to projects, people, or technical work associated with
+        those individuals should not automatically be attributed to
+        Barney.
+      </p>
 
-    <p class="muted">
-      The WHOIS profile focuses on public technical activity,
-      development history, projects, and organizational roles rather
-      than exposing unnecessary personal information.
-    </p>
-  </section>
-
-
-  <!-- =========================
-       METHODOLOGY
-  ========================== -->
-
-  <section>
-    <h2>Assessment Methodology</h2>
-
-    <p>
-      This profile distinguishes documented information from
-      interpretation. Technical classifications describe observable
-      projects and interests and should not be treated as conclusions
-      about hidden motives.
-    </p>
-
-    <ul>
-      <li>
-        <strong>Documented:</strong>
-        Supported by publicly available project or profile information.
-      </li>
-
-      <li>
-        <strong>Self-Reported:</strong>
-        Information supplied by the subject.
-      </li>
-
-      <li>
-        <strong>Observed:</strong>
-        Characteristics inferred from documented activity.
-      </li>
-
-      <li>
-        <strong>Assessment:</strong>
-        Analytical interpretation of available information.
-      </li>
-
-      <li>
-        <strong>Historical:</strong>
-        Activity or projects that are no longer maintained or current.
-      </li>
-
-      <li>
-        <strong>Unverified:</strong>
-        Claims lacking sufficient supporting evidence.
-      </li>
-    </ul>
-  </section>
-
-
-  <!-- =========================
-       FINAL SUMMARY
-  ========================== -->
-
-  <section>
-    <h2>Final WHOIS Summary</h2>
-
-    <p>
-      BarneyTheKid7 is an independent developer and technical
-      hobbyist whose background includes Roblox development, Windows
-      computing, software experimentation, web development, and
-      security-related research.
-    </p>
-
-    <p>
-      The subject's primary computing identity is
-      <strong>Windows-focused</strong>, with broader interests in PC
-      hardware, software, networking, privacy, and cybersecurity.
-      Linux may appear in technical experimentation but does not
-      represent the subject's primary operating-system identity.
-    </p>
-
-    <p>
-      Barney is also the owner of the independent
-      <strong>Krynet Community</strong> organization. This community
-      identity is separate from Krynet, LLC.
-    </p>
-
-    <p>
-      Historical projects include <strong>Barney.SS</strong>, a Roblox
-      backdoor project. The public repository identifies it as an old,
-      no-longer-maintained project and identifies the
-      Blood-Gang-Inc Backdoor source as its underlying source.
-      :contentReference[oaicite:2]{index=2}
-    </p>
-
-    <p>
-      Overall, the profile is best characterized by independent
-      development, Windows and PC computing, experimentation,
-      community ownership, Roblox history, and broad technical
-      curiosity.
-    </p>
-
-    <div class="risk">
-      <strong>Current Status:</strong>
-      <span class="risk-low">ACTIVE</span>
-
-      <br>
-
-      <strong>Primary OS Identity:</strong>
-      <span class="risk-low">WINDOWS</span>
-
-      <br>
-
-      <strong>Technical Interest:</strong>
-      <span class="risk-moderate">BROAD / HIGH</span>
-
-      <br>
-
-      <strong>Barney.SS Status:</strong>
-      <span class="status status-historical">HISTORICAL / ARCHIVED</span>
     </div>
   </section>
 
-</main>
+  <section>
+    <h2>Current Profile</h2>
 
-<footer>
-  WHOIS Report • BarneyTheKid7 • Independent Developer / Krynet Community Owner
-</footer>
+    <div>
+      <span class="classification">Windows</span>
+      <span class="classification">Chrome</span>
+      <span class="classification">Roblox Development</span>
+      <span class="classification">Programming</span>
+      <span class="classification">Software</span>
+      <span class="classification">Krynet Community</span>
+    </div>
 
-<script src="script.js" defer></script>
+    <p>
+      Barney is a developer and Roblox creator who works at Food City
+      and runs Krynet Community. His technical interests center around
+      computers, programming, software, and independently building
+      projects.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 BarneyTheKid7 — Developer Profile
+    </p>
+  </footer>
+
+</div>
+
+<script>
+  "use strict";
+
+  function toggleVisibility(id) {
+    const element = document.getElementById(id);
+
+    if (!element) {
+      return;
+    }
+
+    element.classList.toggle("hidden-section");
+    element.classList.toggle("visible-section");
+  }
+</script>
 
 </body>
 </html>
