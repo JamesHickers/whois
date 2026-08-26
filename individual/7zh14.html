@@ -1,647 +1,585 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WHOIS — Zippy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Discover the development career, creative work, technical background, community roles, and public presence of 7zh14.">
+  <meta name="keywords" content="7zh14, Zippy, Developer, Game Dev, 3D Modeling, UI/UX, Audio Design, Unreal Engine, Unity, Bloodware, Dead Lantern Games, Velxy Studios, ARZA, Krynet">
+  <meta name="author" content="7zh14">
+  <title>7zh14 | Creative & Technical Profile</title>
+
+  <link rel="stylesheet" href="styles.css">
 
   <style>
-    :root {
-      --bg:#0b0e13;
-      --panel:#121722;
-      --text:#e6e8ee;
-      --muted:#9aa3b2;
-      --accent:#7aa2ff;
-      --border:#1f2937;
-      --danger:#f28d8d;
-      --success:#8dd6a7;
-    }
-
-    * {
-      box-sizing:border-box;
-    }
-
     body {
-      margin:0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: #333;
     }
 
-    header {
-      padding:32px;
-      border-bottom:1px solid var(--border);
-      background:linear-gradient(180deg,#0e1320,#0b0e13);
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
-    header h1 {
-      margin:0;
-      font-size:2rem;
-      letter-spacing:.05em;
+    h1, h2, h3 {
+      text-align: center;
+      margin-bottom: 0.5rem;
     }
 
-    header p {
-      margin:8px 0 0;
-      color:var(--muted);
-    }
-
-    main {
-      max-width:1100px;
-      margin:0 auto;
-      padding:32px;
-    }
-
-    section {
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:24px;
-      margin-bottom:24px;
-    }
-
-    section h2 {
-      margin-top:0;
-      border-bottom:1px solid var(--border);
-      padding-bottom:8px;
-      margin-bottom:16px;
-      font-size:1.25rem;
+    p {
+      text-align: center;
+      color: #555;
     }
 
     ul {
-      padding-left:20px;
+      max-width: 800px;
+      margin: 10px auto 20px auto;
+      padding-left: 20px;
     }
 
     li {
-      margin-bottom:6px;
+      margin-bottom: 6px;
+      color: #444;
     }
 
     a {
-      color:var(--accent);
-      text-decoration:none;
+      color: #007acc;
+      text-decoration: none;
     }
 
     a:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
 
-    .risk-high {
-      color:var(--danger);
-      font-weight:700;
+    button {
+      display: block;
+      margin: 10px auto 30px auto;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid #666;
+      background: #eee;
+      transition: background 0.3s ease;
     }
 
-    .status-active {
-      color:var(--success);
-      font-weight:700;
+    button:hover {
+      background: #ddd;
     }
 
-    .redacted {
-      background:#000;
-      color:#555;
-      text-align:center;
-      padding:20px;
-      letter-spacing:.3em;
-      border-radius:6px;
-      overflow:hidden;
+    .hidden-section {
+      display: none;
+      max-width: 850px;
+      margin: auto;
     }
 
-    .classification {
-      display:inline-block;
-      border:1px solid var(--border);
-      border-radius:6px;
-      padding:4px 9px;
-      margin:3px 3px 3px 0;
-      color:var(--muted);
-      font-size:.85rem;
+    .status-box {
+      max-width: 800px;
+      margin: 15px auto;
+      padding: 15px;
+      border-left: 4px solid #555;
+      background: #f1f1f1;
     }
 
-    .timeline {
-      border-left:2px solid var(--border);
-      padding-left:20px;
+    .historical {
+      border-left-color: #8b0000;
+      background: #faf0f0;
     }
 
-    .timeline-item {
-      margin-bottom:20px;
+    .current {
+      border-left-color: #287a45;
+      background: #f0f8f2;
     }
 
-    .timeline-item:last-child {
-      margin-bottom:0;
-    }
-
-    .timeline-item strong {
-      color:var(--accent);
+    .tag {
+      display: inline-block;
+      padding: 4px 9px;
+      margin: 3px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.85rem;
+      color: #555;
+      background: #f8f8f8;
     }
 
     footer {
-      padding:24px;
-      text-align:center;
-      color:var(--muted);
-      border-top:1px solid var(--border);
-    }
-
-    @media (max-width:800px) {
-      main {
-        padding:16px;
-      }
-
-      header {
-        padding:24px 16px;
-      }
+      margin-top: 30px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
-
 </head>
 
 <body>
 
-<header>
-  <h1>WHOIS — Zippy</h1>
-  <p>Developer • OSINT-Referenced Identity • Systems & Multimedia</p>
-</header>
+<div class="container">
 
-<main>
-
-<section>
-  <h2>Known Public Presence</h2>
-
-  <ul>
-    <li>
-      <a href="https://www.rolimons.com/player/2828838275"
-         target="_blank"
-         rel="noopener noreferrer">
-        Roblox — Legacy ID 2828838275
-      </a>
-    </li>
-
-```
-<li>
-  <a href="https://jameshickers.github.io/About/7zh14.html"
-     target="_blank"
-     rel="noopener noreferrer">
-    JamesHickers About Page
-  </a>
-</li>
-
-<li>
-  <a href="https://7zh14.carrd.co"
-     target="_blank"
-     rel="noopener noreferrer">
-    Carrd
-  </a>
-</li>
-
-<li>
-  <a href="https://7zh14-info.carrd.co/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Info Carrd
-  </a>
-</li>
-
-<li>
-  <a href="https://7zh14-info2.carrd.co/"
-     target="_blank"
-     rel="noopener noreferrer">
-    Extended Info Carrd
-  </a>
-</li>
-
-<li>
-  <a href="https://soundcloud.com/7zh14s"
-     target="_blank"
-     rel="noopener noreferrer">
-    SoundCloud
-  </a>
-</li>
-
-<li>
-  <a href="https://www.twitch.tv/7zh14"
-     target="_blank"
-     rel="noopener noreferrer">
-    Twitch
-  </a>
-</li>
-```
-
-  </ul>
-</section>
-
-<section>
-  <h2>Identity & Alias History</h2>
+  <h1>7zh14 | Creative & Technical Profile</h1>
 
   <p>
-    <strong>Zippy</strong> is an online identity associated with the
-    <strong>7zh14</strong> handle across multiple publicly indexed
-    platforms. The recurring identifier provides continuity between
-    gaming, technical, multimedia, and personal-profile references.
+    A profile covering 7zh14's development career, creative skills,
+    technical background, projects, community involvement, and public identity.
   </p>
 
-  <ul>
-    <li><strong>Primary Handle:</strong> 7zh14</li>
-    <li><strong>Known Alias:</strong> Zippy</li>
-    <li><strong>Legacy Identifier:</strong> Roblox ID 2828838275</li>
-    <li><strong>Associated Platforms:</strong> Roblox, Carrd, SoundCloud, Twitch</li>
-    <li><strong>Identity Pattern:</strong> Repeated use of the 7zh14 identifier across platforms</li>
-  </ul>
-</section>
+  <!-- PERSONAL INFO -->
+  <section>
+    <h2>Personal Info & Career</h2>
 
-<section>
-  <h2>Identity & Classification</h2>
+    <button type="button" onclick="toggleVisibility('career-details')">
+      Show More
+    </button>
 
-  <p>
-    <strong>Zippy</strong> is an underground technologist referenced
-    across multiple OSINT-indexed pages. Public material associates the
-    identity with exploit research, bypass tooling, scripting,
-    reverse engineering, malware-related activity, and adversarial
-    interaction with computer systems.
-  </p>
+    <div id="career-details" class="hidden-section">
+      <ul>
+        <li><strong>Real Name:</strong> Unknown</li>
+        <li><strong>Primary Handle:</strong> 7zh14</li>
+        <li><strong>Known Alias:</strong> Zippy</li>
+        <li><strong>Personality:</strong> ISTP</li>
+        <li><strong>Role:</strong> Co-founder of Bloodware Inc., Dead Lantern Games (DLG), Velxy Studios (WSI), ARZA, and Krynet</li>
+        <li><strong>Career Timeline:</strong> Roblox development (2018–2024) → Unreal Engine & Unity development (2024–present)</li>
+        <li><strong>Primary Skills:</strong> 3D modeling, audio design, UI/UX, light scripting, and game development</li>
+        <li><strong>Programming:</strong> Not his primary specialization</li>
+        <li><strong>Other Work:</strong> Full-time bar bouncer</li>
+      </ul>
+    </div>
+  </section>
 
-  <p>
-    The available public footprint indicates a technically focused
-    individual whose interests extend beyond conventional application
-    development into security research, automation, systems interaction,
-    privacy, and multimedia.
-  </p>
+  <!-- HISTORICAL BLACK HAT -->
+  <section>
+    <h2>Historical Black-Hat Background</h2>
 
-  <p>
-    <span class="classification">Security-Oriented</span>
-    <span class="classification">Systems-Focused</span>
-    <span class="classification">Privacy-Conscious</span>
-    <span class="classification">Offensive Security</span>
-    <span class="classification">Underground</span>
-  </p>
+    <button type="button" onclick="toggleVisibility('blackhat-details')">
+      Show More
+    </button>
 
-  <p class="risk-high">
-    <strong>Operational Classification:</strong>
-    Black-Hat • High-Risk • High-Notoriety
-  </p>
-</section>
+    <div id="blackhat-details" class="hidden-section">
 
-<section>
-  <h2>Technical Focus & Activities</h2>
+      <div class="status-box historical">
+        <strong>Historical Status:</strong>
+        Former Black Hat
+      </div>
 
-  <ul>
-    <li>Exploit development and system-bypass tooling</li>
-    <li>Reverse engineering and offensive security research</li>
-    <li>Automation frameworks and persistence tooling</li>
-    <li>Cross-platform scripting using Lua, JavaScript, and Python</li>
-    <li>Low-level system interaction and abuse-surface analysis</li>
-    <li>Malware infection and distribution</li>
-    <li>Sale and distribution of pirated material, including CD rips</li>
-    <li>Security experimentation and adversarial system analysis</li>
-    <li>Privacy and operational-security practices</li>
-    <li>Multimedia and audio-related technical activity</li>
-  </ul>
+      <ul>
+        <li>Previously operated as an evil black hat</li>
+        <li>Historically involved in underground technical activity</li>
+        <li>Previously associated with offensive technical experimentation</li>
+        <li>Developed technical knowledge during this period</li>
+        <li>Built a reputation within underground technical communities</li>
+      </ul>
 
-  <p class="risk-high">
-    <strong>Activity Classification:</strong>
-    Offensive Security • Malware-Associated Activity •
-    Piracy-Associated Activity
-  </p>
+      <h3>Current Status</h3>
 
-  <p>
-    The above activities are presented as documented findings within
-    the available source material rather than as speculative
-    characterizations.
-  </p>
-</section>
+      <div class="status-box current">
+        <strong>Current Status:</strong>
+        No longer an evil black hat.
+      </div>
 
-<section>
-  <h2>Technical Capability Profile</h2>
+      <p>
+        The black-hat period is historical context rather than a description
+        of his current role or activities. His present focus is primarily
+        development, game creation, design, multimedia, and legitimate
+        technical projects.
+      </p>
 
-  <ul>
-    <li><strong>Offensive Security:</strong> Advanced</li>
-    <li><strong>Reverse Engineering:</strong> Advanced</li>
-    <li><strong>Automation:</strong> Advanced</li>
-    <li><strong>Scripting:</strong> Advanced</li>
-    <li><strong>Systems Knowledge:</strong> Advanced</li>
-    <li><strong>Privacy Engineering:</strong> Advanced</li>
-    <li><strong>Operational Security:</strong> High</li>
-    <li><strong>Multimedia / Creative Computing:</strong> Experienced</li>
-  </ul>
+    </div>
+  </section>
 
-  <p>
-    The strongest apparent technical characteristics are adversarial
-    system analysis, automation, scripting, reverse engineering,
-    persistence-oriented tooling, and operational security rather than
-    conventional application development alone.
-  </p>
-</section>
+  <!-- HARDWARE -->
+  <section>
+    <h2>Hardware & Setup</h2>
 
-<section>
-  <h2>Development History</h2>
+    <button type="button" onclick="toggleVisibility('hardware-details')">
+      Show More
+    </button>
 
-  <div class="timeline">
+    <div id="hardware-details" class="hidden-section">
 
-```
-<div class="timeline-item">
-  <strong>Early Period</strong>
-  <p>
-    Initial activity centered around gaming platforms and
-    scripting-oriented experimentation.
-  </p>
+      <h3>Primary Laptop</h3>
+
+      <ul>
+        <li><strong>Model:</strong> Acer Predator Helios 16</li>
+        <li><strong>CPU:</strong> Intel Core i9-14900HX</li>
+        <li><strong>GPU:</strong> NVIDIA RTX 4070</li>
+        <li><strong>RAM:</strong> 64 GB DDR5</li>
+        <li><strong>Storage:</strong> 2 TB PCIe SSD</li>
+      </ul>
+
+      <h3>Consoles</h3>
+
+      <ul>
+        <li>PlayStation 3</li>
+        <li>Nintendo Entertainment System (NES)</li>
+        <li>PlayStation 5</li>
+        <li>Xbox One S</li>
+        <li>Xbox 360</li>
+      </ul>
+
+      <h3>Software & Tools</h3>
+
+      <ul>
+        <li>Unreal Engine</li>
+        <li>Unity Engine</li>
+        <li>Audio editing software</li>
+        <li>UI/UX design tools</li>
+        <li>3D modeling tools</li>
+        <li>Development tools</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- DEVELOPMENT SKILLS -->
+  <section>
+    <h2>Development Skills</h2>
+
+    <button type="button" onclick="toggleVisibility('skills-details')">
+      Show More
+    </button>
+
+    <div id="skills-details" class="hidden-section">
+
+      <h3>3D Modeling</h3>
+
+      <ul>
+        <li>3D asset creation</li>
+        <li>Game assets</li>
+        <li>Modeling for game projects</li>
+        <li>Asset preparation and integration</li>
+      </ul>
+
+      <h3>UI/UX</h3>
+
+      <ul>
+        <li>User-interface design</li>
+        <li>User-experience design</li>
+        <li>Interface assets</li>
+        <li>Visual layout</li>
+        <li>Creative direction</li>
+      </ul>
+
+      <h3>Audio</h3>
+
+      <ul>
+        <li>Audio production</li>
+        <li>Sound design</li>
+        <li>Audio editing</li>
+        <li>Music-related creative work</li>
+      </ul>
+
+      <h3>Scripting</h3>
+
+      <ul>
+        <li>Light scripting</li>
+        <li>Game scripting</li>
+        <li>Automation-oriented scripting</li>
+        <li>Supporting programming work</li>
+      </ul>
+
+      <h3>Programming</h3>
+
+      <p>
+        Programming is not his primary specialization. He is more strongly
+        associated with design, modeling, UI/UX, audio, and multimedia than
+        with dedicated software engineering.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section>
+    <h2>Community & Reputation</h2>
+
+    <button type="button" onclick="toggleVisibility('community-details')">
+      Show More
+    </button>
+
+    <div id="community-details" class="hidden-section">
+
+      <ul>
+        <li>Known primarily as a designer, modeler, and multimedia contributor</li>
+        <li>Active in game-development communities</li>
+        <li>Contributes UI/UX, models, audio, and scripting</li>
+        <li>Associated with Degenerates Network</li>
+        <li>Maintains a close friendship with 4zx16</li>
+        <li>Collaborates with 4zx16 on multiple projects</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects & Contributions</h2>
+
+    <button type="button" onclick="toggleVisibility('projects-details')">
+      Show More
+    </button>
+
+    <div id="projects-details" class="hidden-section">
+
+      <h3>Dead Lantern Games (DLG)</h3>
+
+      <ul>
+        <li>Contributes to mature horror and shooter projects</li>
+        <li>Uses Unreal Engine</li>
+        <li>Involved in creative development</li>
+        <li>Contributes game assets, modeling, UI, and multimedia work</li>
+      </ul>
+
+      <h3>Velxy Studios (WSI)</h3>
+
+      <ul>
+        <li>Contributes to Unity-powered projects</li>
+        <li>Focused toward youth-friendly game development</li>
+        <li>Involved in creative and production work</li>
+      </ul>
+
+      <h3>ARZA</h3>
+
+      <ul>
+        <li>Co-founder</li>
+        <li>Associated with PC hardware projects</li>
+      </ul>
+
+      <h3>Bloodware Inc.</h3>
+
+      <ul>
+        <li>Co-founder</li>
+        <li>Associated with multiple independent projects and brands</li>
+      </ul>
+
+      <h3>Krynet</h3>
+
+      <ul>
+        <li>Co-founder</li>
+        <li>Collaborates on the project with 4zx16</li>
+        <li>Contributes from the creative and design side of the project</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- RELATIONSHIP -->
+  <section>
+    <h2>Relationship With 4zx16</h2>
+
+    <button type="button" onclick="toggleVisibility('relationship-details')">
+      Show More
+    </button>
+
+    <div id="relationship-details" class="hidden-section">
+
+      <p>
+        7zh14 and 4zx16 are close friends and long-term collaborators.
+        Their individual specialties are distinct, despite working together
+        on multiple projects.
+      </p>
+
+      <h3>7zh14's Focus</h3>
+
+      <ul>
+        <li>3D modeling</li>
+        <li>UI/UX</li>
+        <li>Audio</li>
+        <li>Creative development</li>
+        <li>Game development</li>
+        <li>Light scripting</li>
+        <li>Asset creation</li>
+      </ul>
+
+      <h3>Collaboration</h3>
+
+      <ul>
+        <li>Works with 4zx16 on shared projects</li>
+        <li>Contributes creative and design work where appropriate</li>
+        <li>Maintains a separate technical specialization</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- PUBLIC IDENTITY -->
+  <section>
+    <h2>Public Identity</h2>
+
+    <button type="button" onclick="toggleVisibility('identity-details')">
+      Show More
+    </button>
+
+    <div id="identity-details" class="hidden-section">
+
+      <h3>Primary Identity</h3>
+
+      <ul>
+        <li><strong>Handle:</strong> 7zh14</li>
+        <li><strong>Alias:</strong> Zippy</li>
+      </ul>
+
+      <h3>Public Platforms</h3>
+
+      <ul>
+        <li>Roblox</li>
+        <li>Carrd</li>
+        <li>SoundCloud</li>
+        <li>Twitch</li>
+        <li>Development and project pages</li>
+      </ul>
+
+      <h3>Roblox</h3>
+
+      <ul>
+        <li><strong>Legacy Identifier:</strong> 2828838275</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- HEALTH -->
+  <section>
+    <h2>Health Information</h2>
+
+    <button type="button" onclick="toggleVisibility('health-details')">
+      Show More
+    </button>
+
+    <div id="health-details" class="hidden-section">
+
+      <ul>
+        <li>CIPA / vision impairment</li>
+        <li>GERD</li>
+        <li>ADHD</li>
+        <li>Cachexia</li>
+        <li>Anxiety</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- WORKING STYLE -->
+  <section>
+    <h2>Working Style</h2>
+
+    <button type="button" onclick="toggleVisibility('working-details')">
+      Show More
+    </button>
+
+    <div id="working-details" class="hidden-section">
+
+      <ul>
+        <li>Highly independent</li>
+        <li>Hands-on and experimentation-oriented</li>
+        <li>Creative and technically inclined</li>
+        <li>Comfortable across multiple game-development disciplines</li>
+        <li>Moves between modeling, UI, audio, and scripting</li>
+        <li>Focused on practical creation and experimentation</li>
+        <li>Works alongside technically specialized collaborators</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- DEVELOPMENT TIMELINE -->
+  <section>
+    <h2>Development Timeline</h2>
+
+    <button type="button" onclick="toggleVisibility('timeline-details')">
+      Show More
+    </button>
+
+    <div id="timeline-details" class="hidden-section">
+
+      <h3>2018–2024 — Roblox Era</h3>
+
+      <ul>
+        <li>Roblox development</li>
+        <li>Game scripting</li>
+        <li>Game assets</li>
+        <li>Modeling</li>
+        <li>Creative experimentation</li>
+      </ul>
+
+      <h3>2024–Present — Broader Game Development</h3>
+
+      <ul>
+        <li>Transitioned toward Unreal Engine and Unity</li>
+        <li>Expanded into 3D modeling</li>
+        <li>Expanded UI/UX work</li>
+        <li>Expanded audio and multimedia work</li>
+        <li>Continued game-development and scripting work</li>
+      </ul>
+
+      <h3>Historical Security Period</h3>
+
+      <ul>
+        <li>Previously operated as an evil black hat</li>
+        <li>Participated in underground technical activity</li>
+        <li>Developed adversarial technical knowledge</li>
+      </ul>
+
+      <h3>Current Period</h3>
+
+      <ul>
+        <li>No longer operates as an evil black hat</li>
+        <li>Focused on legitimate development</li>
+        <li>Game development</li>
+        <li>Creative technology</li>
+        <li>Design and multimedia</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- CLASSIFICATION -->
+  <section>
+    <h2>Overall Classification</h2>
+
+    <div style="text-align:center; max-width:850px; margin:auto;">
+
+      <span class="tag">7zh14</span>
+      <span class="tag">Zippy</span>
+      <span class="tag">Developer</span>
+      <span class="tag">Designer</span>
+      <span class="tag">3D Modeler</span>
+      <span class="tag">UI/UX</span>
+      <span class="tag">Audio</span>
+      <span class="tag">Game Developer</span>
+      <span class="tag">Former Black Hat</span>
+      <span class="tag">Creative Technologist</span>
+
+    </div>
+
+    <div class="status-box current" style="margin-top:20px;">
+      <strong>Current Direction:</strong>
+      Legitimate development, game development, design,
+      multimedia, and creative technical work.
+    </div>
+
+    <p>
+      7zh14 is primarily a game developer, designer, modeler, and
+      multimedia-focused technical contributor. His former black-hat
+      activity is part of his historical background, but does not
+      represent his current direction.
+    </p>
+
+  </section>
+
 </div>
-
-<div class="timeline-item">
-  <strong>Expansion Period</strong>
-  <p>
-    Broader experimentation with automation, scripting, software,
-    and system behavior.
-  </p>
-</div>
-
-<div class="timeline-item">
-  <strong>Security Period</strong>
-  <p>
-    Increasing involvement in exploit research, reverse engineering,
-    bypass tooling, and adversarial system analysis.
-  </p>
-</div>
-
-<div class="timeline-item">
-  <strong>Current Period</strong>
-  <p>
-    Broader focus spanning security, systems, privacy, multimedia,
-    and operational isolation.
-  </p>
-</div>
-```
-
-  </div>
-</section>
-
-<section>
-  <h2>Operating System & Environment</h2>
-
-  <div class="redacted">
-    ████████████████████████████████████████████████████████████
-  </div>
-
-  <p>
-    Specific environment details are withheld where they would expose
-    unnecessary operational information.
-  </p>
-
-  <p class="risk-high">
-    <strong>System Surface:</strong>
-    Reduced • Linux-exclusive environment minimizes dependence on
-    common default desktop configurations
-  </p>
-</section>
-
-<section>
-  <h2>Cryptography & Data Protection</h2>
-
-  <ul>
-    <li><strong>VeraCrypt:</strong> Used for sensitive encrypted volumes</li>
-    <li><strong>LUKS:</strong> Not deployed</li>
-    <li>Layered encryption practices</li>
-    <li>Offline storage of critical secrets and recovery material</li>
-    <li>Compartmentalized storage for higher-risk workflows</li>
-    <li>Separation of sensitive data from ordinary working environments</li>
-  </ul>
-
-  <p class="risk-high">
-    <strong>Data Security:</strong>
-    Strong • Multiple protection layers reduce exposure from a single
-    compromised environment
-  </p>
-</section>
-
-<section>
-  <h2>Virtualization & Isolation Practices</h2>
-
-  <ul>
-    <li><strong>VirtualBox:</strong> Primary virtualization platform</li>
-    <li>Separate virtual environments for different workflows</li>
-    <li>Snapshot-based rollback</li>
-    <li>Network-restricted VM profiles where appropriate</li>
-    <li>Host/guest separation for higher-risk experimentation</li>
-  </ul>
-
-  <p class="risk-high">
-    <strong>Isolation Discipline:</strong>
-    High • Strong emphasis on environment separation
-  </p>
-</section>
-
-<section>
-  <h2>Browser Hardening & Privacy Stack</h2>
-
-  <ul>
-    <li>Strict browser security and privacy configuration</li>
-    <li>Third-party cookies blocked</li>
-    <li>Fingerprinting and telemetry minimized</li>
-    <li>Privacy-focused content and script controls</li>
-    <li>Aggressive browser permission management</li>
-    <li>Strong authentication-failure protections</li>
-    <li>Reduced unnecessary browser exposure</li>
-  </ul>
-
-  <p class="risk-high">
-    <strong>Browser Exposure:</strong>
-    Minimal • Strong tracking resistance
-  </p>
-</section>
-
-<section>
-  <h2>Anonymity & Counter-OSINT</h2>
-
-  <ul>
-    <li>VPN and proxy routing</li>
-    <li>Alias separation between platforms</li>
-    <li>Minimal unnecessary metadata exposure</li>
-    <li>Deliberate public-facing content curation</li>
-    <li>Compartmentalization of online identities</li>
-    <li>Limited disclosure of environmental information</li>
-  </ul>
-
-  <p>
-    The subject appears to treat online identity as an operational
-    boundary rather than simply a social identifier.
-  </p>
-</section>
-
-<section>
-  <h2>Operating Philosophy</h2>
-
-  <ul>
-    <li>Strong emphasis on privacy and control</li>
-    <li>Preference for compartmentalized environments</li>
-    <li>Minimization of unnecessary data exposure</li>
-    <li>Adversarial analysis of software and infrastructure</li>
-    <li>Preference for isolated testing environments</li>
-    <li>Strong emphasis on maintaining control over sensitive information</li>
-    <li>Practical security measures prioritized over purely theoretical protections</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Working Style</h2>
-
-  <ul>
-    <li>Highly independent technical workflow</li>
-    <li>Strong preference for hands-on experimentation</li>
-    <li>Comfortable moving between multiple technical domains</li>
-    <li>Frequently approaches systems from an adversarial perspective</li>
-    <li>Strong emphasis on operational control</li>
-    <li>Maintains separation between different technical activities</li>
-    <li>Comfortable working outside conventional development environments</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Multimedia & Creative Activity</h2>
-
-  <ul>
-    <li>Music and audio publishing presence</li>
-    <li>Streaming presence through Twitch</li>
-    <li>Technical activity extending into multimedia</li>
-    <li>Public identity spanning technical and creative communities</li>
-  </ul>
-
-  <p>
-    The subject's public footprint is not exclusively security-oriented,
-    with creative and multimedia activity appearing alongside technical
-    interests.
-  </p>
-</section>
-
-<section>
-  <h2>Public Footprint</h2>
-
-  <ul>
-    <li>Multiple publicly indexed identity references</li>
-    <li>Long-term use of a recognizable primary handle</li>
-    <li>Presence across gaming, technical, and multimedia platforms</li>
-    <li>Public information distributed across multiple independent pages</li>
-    <li>Identity continuity across different online contexts</li>
-  </ul>
-
-  <p class="risk-high">
-    <strong>Public Exposure:</strong>
-    Moderate • <strong>Identity Continuity:</strong> High
-  </p>
-</section>
-
-<section>
-  <h2>Security Posture</h2>
-
-  <ul>
-    <li>Strong compartmentalization practices</li>
-    <li>Multiple layers of data protection</li>
-    <li>Virtualized environments for isolation</li>
-    <li>Privacy-oriented browser configuration</li>
-    <li>Network-level privacy measures</li>
-    <li>Deliberate separation of online identities</li>
-    <li>Reduced reliance on default security configurations</li>
-  </ul>
-
-  <p>
-    The subject demonstrates a security posture extending beyond
-    individual applications into storage, operating environment,
-    network configuration, browser configuration, and public identity.
-  </p>
-</section>
-
-<section>
-  <h2>Risk Assessment</h2>
-
-  <p class="risk-high">
-    <strong>Overall Risk Level:</strong> VERY HIGH
-  </p>
-
-  <ul>
-    <li>Advanced knowledge of abuse vectors</li>
-    <li>Documented malware-related activity</li>
-    <li>Documented piracy-related activity</li>
-    <li>Strong operational-security practices</li>
-    <li>High technical adaptability</li>
-    <li>Low apparent predictability from public information</li>
-    <li>Strong privacy posture</li>
-    <li>Experience with adversarial system interaction</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Assessment Methodology</h2>
-
-  <p>
-    This profile distinguishes documented findings from analytical
-    assessment. Findings presented as documented are based on available
-    source material, while classifications and risk ratings represent
-    analytical conclusions derived from those findings.
-  </p>
-
-  <ul>
-    <li>
-      <strong>Documented:</strong>
-      Supported by available source material or documented findings
-    </li>
-
-```
-<li>
-  <strong>Self-Reported:</strong>
-  Information originating from the subject
-</li>
-
-<li>
-  <strong>Observed:</strong>
-  Characteristics inferred from documented activity
-</li>
-
-<li>
-  <strong>Assessment:</strong>
-  Analytical interpretation of available information
-</li>
-
-<li>
-  <strong>Unverified:</strong>
-  Claims lacking sufficient supporting evidence
-</li>
-```
-
-  </ul>
-</section>
-
-<section>
-  <h2>Final OSINT Summary</h2>
-
-  <p>
-    Zippy represents a technically mature, privacy-hardened individual
-    operating across systems, security, scripting, reverse engineering,
-    automation, and multimedia. Documented findings associate the
-    subject with offensive security activity, malware infection and
-    distribution, and the sale or distribution of pirated material.
-  </p>
-
-  <p>
-    Their technical profile extends beyond individual applications into
-    operating-system configuration, encrypted storage, virtualization,
-    browser hardening, network privacy, and identity compartmentalization.
-    This combination indicates substantial familiarity with both
-    adversarial systems and defensive operational practices.
-  </p>
-
-  <p>
-    Public artifacts provide only a partial representation of the
-    subject's capabilities. Their combination of technical knowledge,
-    environmental isolation, privacy practices, and identity
-    compartmentalization makes capability difficult to infer reliably
-    from public information alone.
-  </p>
-
-  <p class="risk-high">
-    Tracking Difficulty: High • Predictability: Low • Technical Threat Potential: High
-  </p>
-</section>
-
-</main>
 
 <footer>
-  WHOIS Report • Zippy / 7zh14 • Generated from publicly indexed OSINT references
+  7zh14 / Zippy • Creative & Technical Profile
 </footer>
+
+<script src="script.js" defer></script>
 
 </body>
 </html>
