@@ -7,19 +7,34 @@
   <meta name="robots" content="index, follow">
   <meta
     name="description"
-    content="BarneyTheKid7 — developer, Roblox creator, programmer, and owner of Krynet Community."
+    content="BarneyTheKid7 - Indie Roblox developer, programmer, software enthusiast, and owner of Krynet Community."
   >
   <meta
     name="keywords"
-    content="BarneyTheKid7, Barney, Roblox, Developer, Programmer, Krynet Community, Barney-SS"
+    content="BarneyTheKid7, Barney, Roblox, Indie Developer, Programming, Web Dev, Krynet Community, Barney SS"
   >
   <meta name="author" content="BarneyTheKid7">
 
-  <title>BarneyTheKid7 | Developer Profile</title>
+  <title>BarneyTheKid7 | Indie Roblox Dev & Creative</title>
+
+  <!-- CORS Header to allow all domains -->
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+  <!-- Allow specific methods and headers -->
+  <meta http-equiv="Access-Control-Allow-Methods" content="GET, POST, OPTIONS">
+  <meta http-equiv="Access-Control-Allow-Headers" content="Content-Type">
 
   <style>
-    * {
+    /* ====================
+       RESET + BASE
+    ==================== */
+
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
@@ -27,164 +42,292 @@
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #121212;
-      color: #eee;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: #fdfdfd;
+      color: #222;
       line-height: 1.7;
+      font-size: 1rem;
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 2rem 2.5rem;
-      background: #1e1e1e;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #ff6f61aa;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
+
+    /* ====================
+       TYPOGRAPHY
+    ==================== */
 
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
       font-weight: 700;
+      color: #1e1e1e;
+      margin-bottom: 20px;
+      line-height: 1.3;
     }
 
     h1 {
+      font-size: 2.6rem;
       text-align: center;
-      margin-bottom: 0.5rem;
-      color: #ff6f61;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 2.5rem;
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #ff6f61;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-size: 2rem;
+      margin-top: 60px;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-top: 40px;
     }
 
     p {
-      font-size: 1.05rem;
-      color: #ddd;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background: #181818;
-      border-radius: 10px;
-      border: 1px solid #292929;
-    }
-
-    ul {
-      list-style-type: square;
-      padding-left: 1.4rem;
-      margin-bottom: 0;
-      color: #ccc;
-    }
-
-    li {
-      margin-bottom: 0.7rem;
-    }
-
-    strong {
-      color: #fff;
+      color: #444;
+      font-size: 1.125rem;
+      margin: 10px 0 30px;
+      text-align: justify;
     }
 
     a {
-      color: #58a6ff;
-      text-decoration: none;
+      color: #0077cc;
+      text-decoration: underline;
+      transition: color 0.2s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #005fa3;
     }
+
+    /* ====================
+       SECTIONS
+    ==================== */
+
+    .section {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 40px;
+      margin-bottom: 60px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* ====================
+       LISTS
+    ==================== */
+
+    ul {
+      max-width: 850px;
+      margin: 10px auto 20px auto;
+      padding-left: 25px;
+    }
+
+    li {
+      margin: 6px 0;
+      color: #444;
+    }
+
+    strong {
+      color: #111;
+    }
+
+    /* ====================
+       BUTTONS
+    ==================== */
 
     button {
       display: block;
-      margin: 1rem auto 1.5rem auto;
+      margin: 10px auto 30px auto;
       padding: 0.6rem 1.4rem;
-      background: #ff6f61;
-      border: none;
-      border-radius: 25px;
-      font-weight: 600;
       font-size: 1rem;
-      color: #121212;
       cursor: pointer;
-      box-shadow: 0 0 10px #ff6f6155;
-      transition:
-        background 0.3s ease,
-        box-shadow 0.3s ease;
+      border-radius: 5px;
+      border: 1px solid #666;
+      background: #eee;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background: #ff5445;
-      box-shadow: 0 0 15px #ff544555;
+      background: #ddd;
     }
+
+    /* ====================
+       HIDDEN SECTIONS
+    ==================== */
 
     .hidden-section {
       display: none;
-      max-width: 750px;
-      margin: 0 auto;
+      max-width: 850px;
+      margin: auto;
     }
 
-    .visible-section {
-      display: block;
-    }
-
-    .classification {
-      display: inline-block;
-      margin: 0.2rem;
-      padding: 0.25rem 0.6rem;
-      border: 1px solid #444;
-      border-radius: 5px;
-      color: #bbb;
-      font-size: 0.9rem;
-    }
+    /* ====================
+       LINKS / NOTES
+    ==================== */
 
     .note {
-      padding: 1rem;
-      margin-top: 1rem;
-      background: #222;
-      border-left: 3px solid #ff6f61;
-      border-radius: 5px;
-      color: #bbb;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 850px;
+      background: #f4f4f4;
+      border-left: 4px solid #0077cc;
+      border-radius: 6px;
     }
 
-    footer {
-      text-align: center;
-      color: #777;
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid #292929;
+    /* ====================
+       TOC
+    ==================== */
+
+    .toc {
+      position: sticky;
+      top: 100px;
+      padding: 20px;
+      border-left: 3px solid #eee;
+      margin-bottom: 40px;
     }
 
-    footer p {
-      color: #777;
-      font-size: 0.9rem;
+    .toc h3 {
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 700px) {
-      .container {
-        margin: 1rem;
-        padding: 1.5rem;
-      }
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
+    .toc li {
+      margin: 6px 0;
+    }
+
+    .toc a {
+      color: #0077cc;
+      font-size: 0.95rem;
+    }
+
+    .toc a.active {
+      font-weight: 600;
+      color: #005fa3;
+    }
+
+    /* ====================
+       PROGRESS BAR
+    ==================== */
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: #007bff;
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.2s ease-out;
+    }
+
+    /* ====================
+       CODE BLOCKS
+    ==================== */
+
+    pre {
+      background: #f4f4f4;
+      padding: 16px;
+      overflow-x: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      color: #c7254e;
+    }
+
+    /* ====================
+       DARK MODE
+    ==================== */
+
+    .dark-mode {
+      background: #121212;
+      color: #eaeaea;
+    }
+
+    .dark-mode .section {
+      background: #1e1e1e;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode h3 {
+      color: #fff;
+    }
+
+    .dark-mode p {
+      color: #cfcfcf;
+    }
+
+    .dark-mode a {
+      color: #66b2ff;
+    }
+
+    .dark-mode .toc {
+      border-left-color: #333;
+    }
+
+    .dark-mode .progress-bar {
+      background: #66b2ff;
+    }
+
+    .dark-mode pre {
+      background: #2d2d2d;
+      color: #eee;
+    }
+
+    .dark-mode .note {
+      background: #2d2d2d;
+      color: #eee;
+    }
+
+    /* ====================
+       RESPONSIVENESS
+    ==================== */
+
+    @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
 
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      iframe {
+        height: 480px;
+      }
+
+      .section {
+        padding: 25px;
+      }
+
+      .toc {
+        position: relative;
+        top: unset;
       }
     }
   </style>
@@ -192,616 +335,617 @@
 
 <body>
 
-<div class="container">
-
-  <h1>BarneyTheKid7</h1>
-
-  <p class="intro">
-    Indie Roblox developer, programmer, software enthusiast, and owner
-    of Krynet Community. Interested in computers, programming, software,
-    and building projects independently.
-  </p>
-
-  <!-- ============================= -->
-  <!-- PERSONAL INFORMATION -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>About Me</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('about')">
-      Reveal My Story
-    </button>
-
-    <div id="about" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Name:</strong>
-          Barney, aka BarneyTheKid7
-        </li>
-
-        <li>
-          <strong>Birthday:</strong>
-          August 3, 2004
-        </li>
-
-        <li>
-          <strong>Education:</strong>
-          High school dropout and college dropout.
-        </li>
-
-        <li>
-          <strong>Work:</strong>
-          Works at Food City while building indie Roblox projects.
-        </li>
-
-        <li>
-          <strong>Development:</strong>
-          Roblox development, programming, and independent software
-          experimentation.
-        </li>
-
-        <li>
-          <strong>Development Style:</strong>
-          Prefers building things independently and experimenting rather
-          than following convention simply because it is conventional.
-        </li>
-
-        <li>
-          <strong>Technical Background:</strong>
-          Self-directed rather than based around formal certifications
-          or traditional credentials.
-        </li>
-
-        <li>
-          <strong>Personality:</strong>
-          Bold, unapologetic, independent, and willing to call out
-          people or projects he considers fake or weak.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- ROBLOX -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Roblox Development</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('roblox')">
-      Show Roblox Details
-    </button>
-
-    <div id="roblox" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Platform:</strong>
-          Roblox
-        </li>
-
-        <li>
-          <strong>Activity:</strong>
-          Creates and works on Roblox projects.
-        </li>
-
-        <li>
-          <strong>Development Style:</strong>
-          Uses existing resources and scripts as part of an
-          experimentation-oriented workflow.
-        </li>
-
-        <li>
-          <strong>Skidding:</strong>
-          Has openly described using or adapting existing models,
-          scripts, and other resources rather than exclusively creating
-          everything from scratch.
-        </li>
-
-        <li>
-          <strong>Cracking:</strong>
-          Has described script cracking and related experimentation
-          as part of his Roblox-oriented activities.
-        </li>
-
-        <li>
-          <strong>Personal Projects:</strong>
-          Roblox remains a major area of independent development.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- PROJECTS -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Projects & Interests</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('projects')">
-      Show My Work
-    </button>
-
-    <div id="projects" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Roblox Games:</strong>
-          Independent Roblox projects using existing resources,
-          scripts, models, and personal modifications.
-        </li>
-
-        <li>
-          <strong>Skidding & Cracking:</strong>
-          Experimentation involving existing Roblox scripts and
-          script-cracking techniques.
-        </li>
-
-        <li>
-          <strong>Web Development:</strong>
-          Independent web projects and experiments.
-        </li>
-
-        <li>
-          <strong>Software:</strong>
-          Interested in computers, programming, software, and
-          understanding how systems work.
-        </li>
-
-        <li>
-          <strong>Experimentation:</strong>
-          Prefers learning by actually building and modifying things.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- KRYNET COMMUNITY -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Krynet Community</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('krynet')">
-      Show Community Details
-    </button>
-
-    <div id="krynet" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Organization:</strong>
-          Krynet Community
-        </li>
-
-        <li>
-          <strong>Role:</strong>
-          Owner
-        </li>
-
-        <li>
-          <strong>GitHub:</strong>
-          <a
-            href="https://github.com/Krynet-Community"
-            target="_blank"
-            rel="noopener noreferrer">
-            github.com/Krynet-Community
-          </a>
-        </li>
-
-        <li>
-          <strong>Ownership:</strong>
-          Barney owns Krynet Community.
-        </li>
-
-        <li>
-          <strong>Organization Separation:</strong>
-          Krynet Community is not Krynet, LLC.
-        </li>
-      </ul>
-
-      <p class="note">
-        Barney's role is specifically with
-        <strong>Krynet Community</strong>. It should not be described as
-        ownership or membership in Krynet, LLC.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- BARNEY-SS -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Barney-SS</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('barneyss')">
-      Show Project Details
-    </button>
-
-    <div id="barneyss" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Project:</strong>
-          Barney-SS
-        </li>
-
-        <li>
-          <strong>Repository:</strong>
-          <a
-            href="https://github.com/JamesHickers/Barney-SS"
-            target="_blank"
-            rel="noopener noreferrer">
-            github.com/JamesHickers/Barney-SS
-          </a>
-        </li>
-
-        <li>
-          <strong>Project Association:</strong>
-          The project is associated with BarneyTheKid7.
-        </li>
-
-        <li>
-          <strong>Backdoor Kit:</strong>
-          The Barney SS backdoor implementation is based on a backdoor
-          kit created by 4zx16.
-        </li>
-      </ul>
-
-      <p class="note">
-        The attribution to 4zx16 concerns the backdoor kit used as the
-        basis for Barney SS. It does <strong>not</strong> mean that
-        BarneyTheKid7 and 4zx16 are the same person.
-      </p>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- TECHNOLOGY -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Technology & Software</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('technology')">
-      Show Technology Details
-    </button>
-
-    <div id="technology" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Operating System:</strong>
-          Windows
-        </li>
-
-        <li>
-          <strong>Browser:</strong>
-          Chrome
-        </li>
-
-        <li>
-          <strong>Computers:</strong>
-          Strong interest in computer hardware and software.
-        </li>
-
-        <li>
-          <strong>Programming:</strong>
-          Software development and experimentation.
-        </li>
-
-        <li>
-          <strong>Roblox:</strong>
-          Game and project development within the Roblox ecosystem.
-        </li>
-
-        <li>
-          <strong>Development Philosophy:</strong>
-          Prefers straightforward, understandable implementations and
-          likes understanding the complete system rather than hiding it
-          behind unnecessary abstraction.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- SOFTWARE PREFERENCES -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Software Preferences</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('preferences')">
-      Show Preferences
-    </button>
-
-    <div id="preferences" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Closed Source:</strong>
-          Prefers closed-source software.
-        </li>
-
-        <li>
-          <strong>Privacy:</strong>
-          Does not prioritize privacy-oriented software or workflows.
-        </li>
-
-        <li>
-          <strong>Security:</strong>
-          Does not prioritize security as a personal software philosophy.
-        </li>
-
-        <li>
-          <strong>Tracking:</strong>
-          Comfortable with software and services that use tracking.
-        </li>
-
-        <li>
-          <strong>Advertising:</strong>
-          Comfortable with advertising-supported software and services.
-        </li>
-
-        <li>
-          <strong>Independence:</strong>
-          Still prefers having control over the things he personally
-          builds and experiments with.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- WORKING STYLE -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Working Style</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('working-style')">
-      Show Working Style
-    </button>
-
-    <div id="working-style" class="hidden-section">
-
-      <ul>
-        <li>
-          Highly independent technical workflow.
-        </li>
-
-        <li>
-          Strong preference for hands-on experimentation.
-        </li>
-
-        <li>
-          Learns through building, modifying, testing, and breaking
-          things.
-        </li>
-
-        <li>
-          Comfortable experimenting outside conventional development
-          workflows.
-        </li>
-
-        <li>
-          Values curiosity and experimentation over credentials.
-        </li>
-
-        <li>
-          Prefers readable and self-contained implementations when
-          practical.
-        </li>
-
-        <li>
-          Likes understanding how the entire system works rather than
-          relying entirely on abstractions.
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- ONLINE PRESENCE -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Online Presence</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('presence')">
-      Show Links
-    </button>
-
-    <div id="presence" class="hidden-section">
-
-      <ul>
-        <li>
-          <strong>Krynet Community:</strong>
-          <a
-            href="https://github.com/Krynet-Community"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub Organization
-          </a>
-        </li>
-
-        <li>
-          <strong>Barney-SS:</strong>
-          <a
-            href="https://github.com/JamesHickers/Barney-SS"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub Repository
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </section>
-
-
-  <!-- ============================= -->
-  <!-- IDENTITY SEPARATION -->
-  <!-- ============================= -->
-
-  <section>
-    <h2>Identity Separation</h2>
-
-    <button
-      type="button"
-      onclick="toggleVisibility('identity')">
-      Show Identity Notes
-    </button>
-
-    <div id="identity" class="hidden-section">
+  <div class="progress-bar"></div>
+
+  <div class="container">
+
+    <h1>BarneyTheKid7</h1>
+
+    <p>
+      Indie Roblox developer, programmer, software enthusiast, and owner
+      of Krynet Community. Builds projects independently and enjoys
+      experimenting with computers, programming, and software.
+    </p>
+
+    <!-- ============================= -->
+    <!-- ABOUT -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>About Me</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('about')">
+        Reveal My Story
+      </button>
+
+      <div id="about" class="hidden-section">
+        <ul>
+
+          <li>
+            <strong>Name:</strong>
+            Barney, aka BarneyTheKid7
+          </li>
+
+          <li>
+            <strong>Birthday:</strong>
+            August 3, 2004
+          </li>
+
+          <li>
+            <strong>Education:</strong>
+            High school dropout and college dropout.
+          </li>
+
+          <li>
+            <strong>Work:</strong>
+            Works at Food City while building indie Roblox projects.
+          </li>
+
+          <li>
+            <strong>Development:</strong>
+            Roblox development, programming, and web development.
+          </li>
+
+          <li>
+            <strong>Development Style:</strong>
+            Independent, experimental, and hands-on.
+          </li>
+
+          <li>
+            <strong>Programming Background:</strong>
+            Self-directed rather than based around formal certifications.
+          </li>
+
+          <li>
+            <strong>Personality:</strong>
+            Bold, unapologetic, independent, and willing to call out
+            people or projects he considers fake or weak.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- ROBLOX -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Roblox Development</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('roblox')">
+        Show My Roblox Work
+      </button>
+
+      <div id="roblox" class="hidden-section">
+        <ul>
+
+          <li>
+            <strong>Platform:</strong>
+            Roblox
+          </li>
+
+          <li>
+            <strong>Activity:</strong>
+            Actively develops and works on Roblox projects.
+          </li>
+
+          <li>
+            <strong>Game Development:</strong>
+            Builds and experiments with Roblox games and projects.
+          </li>
+
+          <li>
+            <strong>Skidding:</strong>
+            Uses and adapts existing models, scripts, and other resources
+            as part of his development workflow.
+          </li>
+
+          <li>
+            <strong>Cracking:</strong>
+            Has worked with script cracking and related experimentation.
+          </li>
+
+          <li>
+            <strong>Personal Approach:</strong>
+            Combines existing resources with personal modifications and
+            experimentation.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- PROJECTS -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Projects & Interests</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('projects')">
+        Show My Work
+      </button>
+
+      <div id="projects" class="hidden-section">
+        <ul>
+
+          <li>
+            <strong>Roblox Games:</strong>
+            Independent Roblox projects using existing resources,
+            scripts, models, and personal modifications.
+          </li>
+
+          <li>
+            <strong>Skidding & Cracking:</strong>
+            Experimentation involving existing Roblox scripts and
+            script-cracking techniques.
+          </li>
+
+          <li>
+            <strong>Web Development:</strong>
+            Independent web projects and experiments.
+          </li>
+
+          <li>
+            <strong>Programming:</strong>
+            Software development and experimentation.
+          </li>
+
+          <li>
+            <strong>Community:</strong>
+            Building and participating in technical communities.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- KRYNET -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Krynet Community</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('krynet')">
+        Show Community Details
+      </button>
+
+      <div id="krynet" class="hidden-section">
+
+        <ul>
+
+          <li>
+            <strong>Organization:</strong>
+            Krynet Community
+          </li>
+
+          <li>
+            <strong>Role:</strong>
+            Owner
+          </li>
+
+          <li>
+            <strong>GitHub:</strong>
+            <a
+              href="https://github.com/Krynet-Community"
+              target="_blank"
+              rel="noopener noreferrer">
+              github.com/Krynet-Community
+            </a>
+          </li>
+
+          <li>
+            <strong>Ownership:</strong>
+            Barney owns Krynet Community.
+          </li>
+
+          <li>
+            <strong>Organization Separation:</strong>
+            Krynet Community is separate from Krynet, LLC.
+          </li>
+
+        </ul>
+
+        <p class="note">
+          Barney's role is specifically as the owner of
+          <strong>Krynet Community</strong>. This should not be
+          interpreted as ownership of or membership in Krynet, LLC.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- BARNEY SS -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Barney-SS</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('barney-ss')">
+        Show Project Details
+      </button>
+
+      <div id="barney-ss" class="hidden-section">
+
+        <ul>
+
+          <li>
+            <strong>Project:</strong>
+            Barney-SS
+          </li>
+
+          <li>
+            <strong>Repository:</strong>
+            <a
+              href="https://github.com/JamesHickers/Barney-SS"
+              target="_blank"
+              rel="noopener noreferrer">
+              github.com/JamesHickers/Barney-SS
+            </a>
+          </li>
+
+          <li>
+            <strong>Association:</strong>
+            Project associated with BarneyTheKid7.
+          </li>
+
+          <li>
+            <strong>Backdoor Kit:</strong>
+            The Barney SS backdoor was made using the backdoor kit
+            created by 4zx16.
+          </li>
+
+        </ul>
+
+        <p class="note">
+          The 4zx16 reference here describes the origin of the backdoor
+          kit used by Barney SS. BarneyTheKid7 and 4zx16 are separate
+          individuals.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- TECHNOLOGY -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Technology & Software</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('technology')">
+        Show Technology Details
+      </button>
+
+      <div id="technology" class="hidden-section">
+
+        <ul>
+
+          <li>
+            <strong>Operating System:</strong>
+            Windows
+          </li>
+
+          <li>
+            <strong>Browser:</strong>
+            Chrome
+          </li>
+
+          <li>
+            <strong>Computers:</strong>
+            Strong interest in computers and computer software.
+          </li>
+
+          <li>
+            <strong>Programming:</strong>
+            Software development and experimentation.
+          </li>
+
+          <li>
+            <strong>Roblox:</strong>
+            Game development and scripting.
+          </li>
+
+          <li>
+            <strong>Web Development:</strong>
+            Builds and experiments with websites and web projects.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SOFTWARE PREFERENCES -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Software Preferences</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('preferences')">
+        Show Preferences
+      </button>
+
+      <div id="preferences" class="hidden-section">
+
+        <ul>
+
+          <li>
+            <strong>Closed Source:</strong>
+            Prefers closed-source software.
+          </li>
+
+          <li>
+            <strong>Open Source:</strong>
+            Does not particularly favor open-source software.
+          </li>
+
+          <li>
+            <strong>Privacy:</strong>
+            Does not prioritize privacy-focused software.
+          </li>
+
+          <li>
+            <strong>Security:</strong>
+            Does not make security the central focus of his software
+            preferences.
+          </li>
+
+          <li>
+            <strong>Tracking:</strong>
+            Comfortable with tracking in software and online services.
+          </li>
+
+          <li>
+            <strong>Advertising:</strong>
+            Comfortable with advertising-supported software and services.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- WORKING STYLE -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Working Style</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('working-style')">
+        Show Working Style
+      </button>
+
+      <div id="working-style" class="hidden-section">
+
+        <ul>
+
+          <li>
+            Highly independent technical workflow.
+          </li>
+
+          <li>
+            Strong preference for hands-on experimentation.
+          </li>
+
+          <li>
+            Learns by building, modifying, testing, and experimenting.
+          </li>
+
+          <li>
+            Comfortable working outside conventional development
+            workflows.
+          </li>
+
+          <li>
+            Values curiosity and experimentation.
+          </li>
+
+          <li>
+            Prefers simple and readable implementations when practical.
+          </li>
+
+          <li>
+            Likes understanding the complete system instead of hiding
+            everything behind unnecessary abstraction.
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- IDENTITY SEPARATION -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Identity Separation</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('identity')">
+        Show Identity Notes
+      </button>
+
+      <div id="identity" class="hidden-section">
+
+        <p>
+          BarneyTheKid7 is a distinct identity and should not be
+          conflated with other people referenced on related pages.
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Barney / BarneyTheKid7:</strong>
+            Owner of Krynet Community.
+          </li>
+
+          <li>
+            <strong>4zx16:</strong>
+            Separate individual.
+          </li>
+
+          <li>
+            <strong>7zh14:</strong>
+            Separate individual.
+          </li>
+
+          <li>
+            <strong>Sophia:</strong>
+            Separate individual.
+          </li>
+
+        </ul>
+
+        <p class="note">
+          Projects, friendships, repositories, or technical associations
+          involving another person do not make that person Barney.
+          Information specific to 4zx16, 7zh14, or Sophia should not be
+          automatically attributed to Barney.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- PUBLIC LINKS -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Public Projects & Links</h2>
+
+      <button
+        type="button"
+        onclick="toggleVisibility('links')">
+        Show Links
+      </button>
+
+      <div id="links" class="hidden-section">
+
+        <ul>
+
+          <li>
+            <strong>Krynet Community:</strong>
+            <a
+              href="https://github.com/Krynet-Community"
+              target="_blank"
+              rel="noopener noreferrer">
+              GitHub Organization
+            </a>
+          </li>
+
+          <li>
+            <strong>Barney-SS:</strong>
+            <a
+              href="https://github.com/JamesHickers/Barney-SS"
+              target="_blank"
+              rel="noopener noreferrer">
+              GitHub Repository
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SUMMARY -->
+    <!-- ============================= -->
+
+    <section class="section">
+      <h2>Profile Summary</h2>
 
       <p>
-        BarneyTheKid7 is a distinct identity and should not be
-        conflated with other individuals referenced elsewhere on this
-        site.
+        BarneyTheKid7 is an independent developer and Roblox creator who
+        works at Food City and owns Krynet Community. His interests
+        include computers, programming, software, Roblox development,
+        and building projects for fun.
       </p>
 
-      <ul>
-        <li>
-          <strong>Barney / BarneyTheKid7:</strong>
-          Owner of Krynet Community.
-        </li>
-
-        <li>
-          <strong>4zx16:</strong>
-          Separate individual.
-        </li>
-
-        <li>
-          <strong>7zh14:</strong>
-          Separate individual.
-        </li>
-
-        <li>
-          <strong>Sophia:</strong>
-          Separate individual.
-        </li>
-      </ul>
-
-      <p class="note">
-        Shared projects, repositories, friendships, or technical
-        associations do not make these identities interchangeable.
-        Information belonging specifically to 4zx16, 7zh14, or Sophia
-        should not automatically be attributed to Barney.
+      <p>
+        His development work includes Roblox projects, web development,
+        programming, script experimentation, and Barney-SS. He favors
+        hands-on experimentation and prefers understanding how the
+        systems he works with actually function.
       </p>
 
-    </div>
-  </section>
+      <p>
+        Barney primarily uses Windows and Chrome. His software
+        preferences differ from a privacy-first approach: he prefers
+        closed-source software and is comfortable with tracking and
+        advertising-supported services.
+      </p>
+
+      <p>
+        Barney's ownership of Krynet Community is distinct from Krynet,
+        LLC, and Barney should not be conflated with 4zx16, 7zh14, or
+        Sophia.
+      </p>
+
+    </section>
 
 
-  <!-- ============================= -->
-  <!-- PROFILE SUMMARY -->
-  <!-- ============================= -->
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
 
-  <section>
-    <h2>Profile Summary</h2>
+    <footer>
+      <p>
+        © 2026 BarneyTheKid7 — Developer Profile
+      </p>
+    </footer>
 
-    <div>
-      <span class="classification">Windows</span>
-      <span class="classification">Chrome</span>
-      <span class="classification">Roblox</span>
-      <span class="classification">Programming</span>
-      <span class="classification">Software</span>
-      <span class="classification">Web Development</span>
-      <span class="classification">Krynet Community</span>
-    </div>
-
-    <p>
-      BarneyTheKid7 is an independent developer and Roblox creator who
-      works at Food City and owns Krynet Community. His interests include
-      computers, programming, software, Roblox development, and
-      experimenting with projects independently.
-    </p>
-
-    <p>
-      His development history includes Roblox projects, web development,
-      script experimentation, and projects such as Barney-SS. His
-      approach emphasizes hands-on experimentation and understanding
-      systems directly rather than relying exclusively on conventional
-      development practices.
-    </p>
-
-    <p>
-      Barney uses Windows and Chrome and prefers closed-source software,
-      tracking, and advertising-supported services rather than a
-      privacy-first or open-source-oriented software philosophy.
-    </p>
-
-  </section>
+  </div>
 
 
-  <!-- ============================= -->
-  <!-- FOOTER -->
-  <!-- ============================= -->
+  <script>
+    "use strict";
 
-  <footer>
-    <p>
-      © 2026 BarneyTheKid7 — Developer Profile
-    </p>
-  </footer>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
 
-</div>
+      if (!el) {
+        return;
+      }
 
-
-<script>
-  "use strict";
-
-  function toggleVisibility(id) {
-    const element = document.getElementById(id);
-
-    if (!element) {
-      return;
+      if (el.style.display === "block") {
+        el.style.display = "none";
+      } else {
+        el.style.display = "block";
+      }
     }
-
-    element.classList.toggle("hidden-section");
-    element.classList.toggle("visible-section");
-  }
-</script>
+  </script>
 
 </body>
 </html>
