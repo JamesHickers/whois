@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Unified OSINT Search</title>
+  <meta name="robots" content="index, follow">
+  <meta
+    name="description"
+    content="Developer Network Hub and local WHOIS profile search for BarneyTheKid7, 4zx16, 7zh14, and Saz."
+  >
+  <meta
+    name="keywords"
+    content="BarneyTheKid7, 4zx16, 7zh14, Saz, Developer Network, WHOIS, OSINT"
+  >
+  <meta name="author" content="BarneyTheKid7">
 
-  <!-- D3 must load before search.js executes -->
+  <title>Developer Network Hub | WHOIS</title>
 
-  <script
-    src="https://d3js.org/d3.v7.min.js"
-    crossorigin="anonymous">
-  </script>
+  <link rel="stylesheet" href="styles.css">
 
   <style>
     :root {
       --bg: #0b0e13;
       --panel: #121722;
+      --panel-hover: #181e2b;
       --text: #e6e8ee;
       --muted: #9aa3b2;
       --accent: #7aa2ff;
+      --accent-hover: #9bb8ff;
       --border: #1f2937;
       --danger: #f28d8d;
+      --success: #8dd6a7;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
+      min-height: 100vh;
       padding: 32px;
+
       font-family:
         system-ui,
         -apple-system,
@@ -44,20 +58,120 @@
       line-height: 1.6;
     }
 
-    h1 {
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto 32px;
+
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .hub {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ================================
+       Developer Network
+       ================================ */
+
+    #network {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .profile-link {
+      display: block;
+
+      padding: 20px;
+
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .profile-link:hover {
+      background: var(--panel-hover);
+      border-color: var(--accent);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    .profile-link strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.1rem;
+    }
+
+    .profile-link span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ================================
+       WHOIS Search
+       ================================ */
+
+    #whois {
+      padding-top: 8px;
+    }
+
+    #whois h2 {
       margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .whois-description {
+      margin-top: 0;
+      color: var(--muted);
     }
 
     #searchBar {
       display: flex;
       gap: 10px;
+
+      width: 100%;
       max-width: 700px;
-      margin-bottom: 24px;
+
+      margin: 24px 0;
     }
 
     #inputSearch {
       flex: 1;
       min-width: 0;
+
       padding: 12px 14px;
 
       background: var(--panel);
@@ -69,13 +183,17 @@
       font: inherit;
     }
 
+    #inputSearch::placeholder {
+      color: var(--muted);
+    }
+
     #inputSearch:focus {
       outline: 2px solid var(--accent);
       outline-offset: 1px;
     }
 
     #searchBtn {
-      padding: 12px 18px;
+      padding: 12px 20px;
 
       background: var(--accent);
       color: #080b10;
@@ -87,6 +205,14 @@
       font-weight: 700;
 
       cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    #searchBtn:hover:not(:disabled) {
+      background: var(--accent-hover);
     }
 
     #searchBtn:disabled {
@@ -94,9 +220,20 @@
       cursor: wait;
     }
 
+    /* ================================
+       Results
+       ================================ */
+
     #result {
       width: 100%;
       max-width: 1100px;
+    }
+
+    #result > h2 {
+      margin-top: 0;
+      padding-bottom: 12px;
+
+      border-bottom: 1px solid var(--border);
     }
 
     #localProfile,
@@ -104,43 +241,56 @@
       width: 100%;
     }
 
-    #dynamicProfile section,
-    #localProfile section {
+    #localProfile section,
+    #dynamicProfile section {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 10px;
+
       padding: 24px;
       margin-bottom: 24px;
     }
 
-    #dynamicProfile h2,
-    #dynamicProfile h3,
+    #localProfile h1,
     #localProfile h2,
-    #localProfile h3 {
+    #localProfile h3,
+    #dynamicProfile h1,
+    #dynamicProfile h2,
+    #dynamicProfile h3 {
       margin-top: 0;
     }
 
-    #dynamicProfile svg {
-      display: block;
-      width: 100%;
-      max-width: 900px;
-      min-height: 320px;
-
-      color: var(--text);
-
-      background: rgba(0, 0, 0, 0.15);
-      border-radius: 8px;
+    #localProfile ul,
+    #dynamicProfile ul {
+      padding-left: 22px;
     }
 
-    pre {
-      overflow-x: auto;
-      white-space: pre-wrap;
-      word-break: break-word;
+    #localProfile li,
+    #dynamicProfile li {
+      margin-bottom: 6px;
     }
 
-    .error {
+    #localProfile .redacted {
+      background: #000;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .search-status {
       padding: 16px;
-      margin-bottom: 24px;
+
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+
+      color: var(--muted);
+    }
+
+    .search-error {
+      padding: 16px;
 
       background: var(--panel);
       border: 1px solid var(--danger);
@@ -149,53 +299,335 @@
       color: var(--danger);
     }
 
-    .loading {
+    .no-profile {
+      padding: 24px;
+
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
       color: var(--muted);
     }
-  </style>
 
+    footer {
+      width: 100%;
+      max-width: 1100px;
+
+      margin: 48px auto 0;
+      padding-top: 24px;
+
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ================================
+       Responsive
+       ================================ */
+
+    @media (max-width: 700px) {
+      body {
+        padding: 20px 16px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      #network {
+        grid-template-columns: 1fr;
+      }
+
+      #searchBar {
+        flex-direction: column;
+      }
+
+      #searchBtn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>OSINT / WHOIS Search</h1>
+  <header>
+    <h1>Developer Network Hub</h1>
+    <p>
+      Developer profiles, project references, and local WHOIS profile lookup.
+    </p>
+  </header>
 
-  <div id="searchBar">
-    <input
-      id="inputSearch"
-      type="text"
-      placeholder="Username"
-      autocomplete="off"
-      spellcheck="false"
-      aria-label="Username"
-    >
+  <main class="hub">
 
-```
-<button
-  id="searchBtn"
-  type="button">
-  Search
-</button>
-```
+    <!-- ================================
+         DEVELOPER NETWORK
+         ================================ -->
 
-  </div>
+    <section id="network">
+      <a
+        class="profile-link"
+        href="barney.html"
+        title="BarneyTheKid7 Portfolio"
+      >
+        <strong>BarneyTheKid7</strong>
+        <span>Developer profile</span>
+      </a>
 
-  <main id="result" aria-live="polite">
-    <div id="localProfile"></div>
-    <div id="dynamicProfile"></div>
+      <a
+        class="profile-link"
+        href="4zx16.html"
+        title="4zx16 Profile"
+      >
+        <strong>4zx16</strong>
+        <span>Technical / security profile</span>
+      </a>
+
+      <a
+        class="profile-link"
+        href="7zh14.html"
+        title="7zh14 Profile"
+      >
+        <strong>7zh14</strong>
+        <span>Creative & technical profile</span>
+      </a>
+
+      <a
+        class="profile-link"
+        href="saz.html"
+        title="Saz Executor"
+      >
+        <strong>Saz</strong>
+        <span>Legacy Roblox project</span>
+      </a>
+    </section>
+
+    <!-- ================================
+         WHOIS SEARCH
+         ================================ -->
+
+    <section id="whois">
+
+      <h2>OSINT / WHOIS Search</h2>
+
+      <p class="whois-description">
+        Search the local profile database by username or alias.
+        Results are loaded from the corresponding profile in
+        <code>individual/</code>.
+      </p>
+
+      <div id="searchBar">
+
+        <input
+          id="inputSearch"
+          type="text"
+          placeholder="Username or alias"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Username or alias"
+        >
+
+        <button
+          id="searchBtn"
+          type="button"
+        >
+          Search
+        </button>
+
+      </div>
+
+      <main id="result" aria-live="polite">
+
+        <div id="localProfile"></div>
+
+        <div id="dynamicProfile"></div>
+
+      </main>
+
+    </section>
+
   </main>
 
-  <!--
-    Keep this AFTER D3.
-    search.js is an ES module and imports:
-      ./modues/OIST.js
+  <footer>
+    Developer Network • Local WHOIS / Profile Index
+  </footer>
 
-    OIST.js expects D3 to already exist as window.d3.
-  -->
+  <!-- Existing UI functionality -->
+  <script src="script.js" defer></script>
 
-  <script
-    type="module"
-    src="./search.js">
+  <!-- Local WHOIS search -->
+  <script>
+    "use strict";
+
+    const input = document.getElementById("inputSearch");
+    const btn = document.getElementById("searchBtn");
+    const result = document.getElementById("result");
+
+    async function loadProfile(user) {
+      const localProfile =
+        document.getElementById("localProfile");
+
+      const dynamicProfile =
+        document.getElementById("dynamicProfile");
+
+      localProfile.replaceChildren();
+      dynamicProfile.replaceChildren();
+
+      const heading =
+        document.createElement("h2");
+
+      heading.textContent =
+        `Search Results for: ${user}`;
+
+      result.prepend(heading);
+
+      const loading =
+        document.createElement("div");
+
+      loading.className =
+        "search-status";
+
+      loading.textContent =
+        "Loading local profile…";
+
+      dynamicProfile.appendChild(loading);
+
+      try {
+        const response = await fetch(
+          `individual/${encodeURIComponent(user)}.html`,
+          {
+            method: "GET",
+            cache: "no-store"
+          }
+        );
+
+        loading.remove();
+
+        if (!response.ok) {
+          if (response.status === 404) {
+            const message =
+              document.createElement("div");
+
+            message.className =
+              "no-profile";
+
+            message.textContent =
+              "No local profile was found for this identity.";
+
+            dynamicProfile.appendChild(message);
+          } else {
+            throw new Error(
+              `Profile request failed: HTTP ${response.status}`
+            );
+          }
+
+          return;
+        }
+
+        const html =
+          await response.text();
+
+        if (!html.trim()) {
+          const message =
+            document.createElement("div");
+
+          message.className =
+            "no-profile";
+
+          message.textContent =
+            "The local profile exists but contains no content.";
+
+          dynamicProfile.appendChild(message);
+
+          return;
+        }
+
+        /*
+         * The local profile is intentionally inserted as HTML
+         * because the profile pages themselves contain sections,
+         * links, buttons, and formatting.
+         */
+        localProfile.innerHTML = html;
+
+        /*
+         * Re-run UI initialization for dynamically inserted
+         * profile content.
+         */
+        if (typeof animateContentOnLoad === "function") {
+          animateContentOnLoad();
+        }
+
+        if (typeof lazyLoadImages === "function") {
+          lazyLoadImages();
+        }
+
+        if (typeof tocScrollSpy === "function") {
+          tocScrollSpy();
+        }
+
+        if (typeof enableSmoothScrolling === "function") {
+          enableSmoothScrolling();
+        }
+
+        if (typeof autoResizeIframes === "function") {
+          autoResizeIframes();
+        }
+
+      } catch (error) {
+        console.error(
+          "[WHOIS] Profile loading failed:",
+          error
+        );
+
+        loading.remove();
+
+        const errorBox =
+          document.createElement("div");
+
+        errorBox.className =
+          "search-error";
+
+        errorBox.textContent =
+          error instanceof Error
+            ? error.message
+            : String(error);
+
+        dynamicProfile.appendChild(errorBox);
+
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    async function performSearch() {
+      const user =
+        input.value.trim();
+
+      if (!user) {
+        return;
+      }
+
+      btn.disabled = true;
+
+      await loadProfile(user);
+    }
+
+    btn.addEventListener(
+      "click",
+      performSearch
+    );
+
+    input.addEventListener(
+      "keydown",
+      event => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          performSearch();
+        }
+      }
+    );
   </script>
 
 </body>
