@@ -2,127 +2,764 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="robots" content="index, follow">
-  <meta name="description" content="BarneyTheKid7 - Indie Roblox Dev who’s all about skidding, cracking scripts, and doing it his way. No certificates, just passion and hustle.">
-  <meta name="keywords" content="BarneyTheKid7, Roblox, Indie Developer, Skidding, Cracking, Game Dev, Web Dev">
+  <meta
+    name="description"
+    content="WHOIS profile for BarneyTheKid7, covering development history, technical interests, projects, systems knowledge, and public online presence."
+  >
+  <meta
+    name="keywords"
+    content="BarneyTheKid7, WHOIS, Developer, Roblox, Web Development, Cybersecurity, Programming, Linux"
+  >
   <meta name="author" content="BarneyTheKid7">
-  <title>BarneyTheKid7 | Indie Roblox Dev & Creative</title>
-    <!-- CORS Header to allow all domains -->
-  <meta http-equiv="Access-Control-Allow-Origin" content="*">
-  
-  <!-- Allow specific methods and headers -->
-  <meta http-equiv="Access-Control-Allow-Methods" content="GET, POST, OPTIONS">
-  <meta http-equiv="Access-Control-Allow-Headers" content="Content-Type">
+
+  <title>WHOIS — BarneyTheKid7</title>
+
+  <link rel="stylesheet" href="styles.css">
+
   <style>
+    :root {
+      --bg: #0b0e13;
+      --panel: #121722;
+      --panel-alt: #0e131c;
+      --text: #e6e8ee;
+      --muted: #9aa3b2;
+      --accent: #7aa2ff;
+      --border: #1f2937;
+      --danger: #f28d8d;
+      --success: #8dd6a7;
+      --warning: #e5c07b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212;
-      color: #eee;
-      margin: 0; padding: 0;
-    }
-    .container {
-      max-width: 850px;
-      margin: 2rem auto;
-      background: #1e1e1e;
-      padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #ff6f61aa;
-    }
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      color: #ff6f61;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    p {
-      font-size: 1.1rem;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
       line-height: 1.6;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: #ddd;
     }
+
+    header {
+      padding: 36px 32px;
+      border-bottom: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, #0e1320, #0b0e13);
+    }
+
+    header h1 {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 2.1rem;
+      letter-spacing: .04em;
+    }
+
+    header p {
+      max-width: 1100px;
+      margin: 8px auto 0;
+      color: var(--muted);
+    }
+
+    main {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.25rem;
+    }
+
+    section h3 {
+      margin-top: 24px;
+    }
+
+    p {
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
     ul {
-      list-style-type: square;
-      padding-left: 1.4rem;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      color: #ccc;
+      padding-left: 22px;
     }
+
     li {
-      margin-bottom: 0.7rem;
+      margin-bottom: 7px;
     }
-    button {
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      color: #fff;
+    }
+
+    .classification {
+      display: inline-block;
+      padding: 4px 9px;
+      margin: 3px 4px 3px 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: .85rem;
+      font-weight: 700;
+      border: 1px solid var(--border);
+    }
+
+    .status-active {
+      color: var(--success);
+    }
+
+    .status-unknown {
+      color: var(--warning);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .profile-item {
+      padding: 14px;
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .profile-item .label {
       display: block;
-      margin: 1rem auto 2rem auto;
-      padding: 0.6rem 1.4rem;
-      background: #ff6f61;
-      border: none;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      color: #121212;
-      cursor: pointer;
-      box-shadow: 0 0 10px #ff6f6155;
-      transition: background 0.3s ease;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: .85rem;
     }
-    button:hover {
-      background: #ff5445;
-      box-shadow: 0 0 15px #ff544555;
+
+    .timeline {
+      border-left: 2px solid var(--border);
+      padding-left: 20px;
     }
-    .hidden-section {
-      display: none;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      color: #bbb;
+
+    .timeline-item {
+      margin-bottom: 22px;
     }
-    footer {
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item strong {
+      color: var(--accent);
+    }
+
+    .risk {
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel-alt);
+    }
+
+    .risk-low {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .risk-moderate {
+      color: var(--warning);
+      font-weight: 700;
+    }
+
+    .redacted {
+      background: #000;
+      color: #555;
       text-align: center;
-      font-style: italic;
-      color: #777;
-      margin-top: 3rem;
+      padding: 18px;
+      border-radius: 6px;
+      letter-spacing: .25em;
+      overflow: hidden;
+    }
+
+    footer {
+      padding: 28px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 28px 18px;
+      }
+
+      main {
+        padding: 20px 16px;
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>BarneyTheKid7</h1>
-    <p>Indie Roblox dev who don’t mess with certificates or fancy degrees. Skidding and cracking scripts is the game, passion and hustle is the fuel. Real talk, raw grind.</p>
-    <section>
-      <h2>About Me</h2>
-      <button type="button" onclick="toggleVisibility('about')">Reveal My Story</button>
-      <div id="about" class="hidden-section">
-        <ul>
-          <li><strong>Name:</strong> Barney, aka BarneyTheKid7</li>
-          <li><strong>Birthday:</strong> August 3, 2004 — full Leo energy, loud and proud</li>
-          <li><strong>Education:</strong> High school dropout. College dropout. Ain’t about that traditional path.</li>
-          <li><strong>Work:</strong> Grinding at Food City while building indie Roblox projects</li>
-          <li><strong>Dev Style:</strong> Loves stealing models, skidding scripts, and calling out sissies</li>
-          <li><strong>Skills:</strong> No formal coding background, but a master at skidding & cracking</li>
-          <li><strong>Cybersecurity:</strong> Zero knowledge, no certs — just vibes and street smarts</li>
-          <li><strong>Side Hustle:</strong> Indie web dev experiments but Roblox is king</li>
-          <li><strong>Personality:</strong> Bold, unapologetic, always ready to roast a faker</li>
-        </ul>
+
+<header>
+  <h1>WHOIS — BarneyTheKid7</h1>
+  <p>
+    Developer • Systems Enthusiast • Roblox / Web Development •
+    Security & Privacy Interest
+  </p>
+</header>
+
+<main>
+
+  <!-- =========================
+       IDENTITY
+  ========================== -->
+
+  <section>
+    <h2>Identity Overview</h2>
+
+    <div class="profile-grid">
+
+      <div class="profile-item">
+        <span class="label">Primary Handle</span>
+        <strong>BarneyTheKid7</strong>
       </div>
-    </section>
-    <section>
-      <h2>Projects & Interests</h2>
-      <button type="button" onclick="toggleVisibility('projects')">Show My Work</button>
-      <div id="projects" class="hidden-section">
-        <ul>
-          <li><strong>Roblox Games:</strong> Mostly built on skidded models and scripts, with some personal touches</li>
-          <li><strong>Skidding & Cracking:</strong> Known for ripping scripts and calling out weak devs</li>
-          <li><strong>Web Dev:</strong> Small indie projects, testing waters but mostly focus on Roblox</li>
-          <li><strong>Community:</strong> Loves calling out phonies and keeping it 100%</li>
-          <li><strong>Goals:</strong> Not chasing certs, just wants to create, own, and flex on his terms</li>
-        </ul>
+
+      <div class="profile-item">
+        <span class="label">Known Alias</span>
+        <strong>Barney</strong>
       </div>
-    </section>
-    <footer>  
-      <p>© 2025 BarneyTheKid7 — The realest indie dev with no filter.</p>
-    </footer>
-  </div>
-  <script src="script.js" defer></script>
+
+      <div class="profile-item">
+        <span class="label">Real-World Identity</span>
+        <span class="muted">Not publicly disclosed</span>
+      </div>
+
+      <div class="profile-item">
+        <span class="label">Primary Domain</span>
+        <strong>Software / Systems</strong>
+      </div>
+
+      <div class="profile-item">
+        <span class="label">Development Background</span>
+        <strong>Independent / Self-Taught</strong>
+      </div>
+
+      <div class="profile-item">
+        <span class="label">Current Status</span>
+        <span class="status status-active">ACTIVE</span>
+      </div>
+
+    </div>
+
+    <p>
+      BarneyTheKid7 is an independent developer identity associated
+      with software experimentation, Roblox development, web projects,
+      systems administration, Linux, privacy technology, and
+      cybersecurity-oriented research.
+    </p>
+  </section>
+
+
+  <!-- =========================
+       DEVELOPMENT HISTORY
+  ========================== -->
+
+  <section>
+    <h2>Development History</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <strong>Early Development</strong>
+        <p>
+          Development activity began around Roblox, with experimentation
+          involving game creation, scripts, assets, and modifications to
+          existing projects.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Independent Development</strong>
+        <p>
+          Development expanded beyond Roblox into web applications,
+          utilities, automation, system configuration, and general
+          software experimentation.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Systems & Linux</strong>
+        <p>
+          Increasing interest in Linux, operating-system internals,
+          self-hosted infrastructure, package management, virtualization,
+          storage encryption, and system hardening.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Security Focus</strong>
+        <p>
+          Technical interests expanded into cybersecurity, code auditing,
+          vulnerability analysis, privacy engineering, network security,
+          and defensive/offensive security concepts.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <strong>Current Direction</strong>
+        <p>
+          Current work spans programming, infrastructure, privacy-focused
+          software, security research, experimentation, and independent
+          technical projects.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       TECHNICAL PROFILE
+  ========================== -->
+
+  <section>
+    <h2>Technical Profile</h2>
+
+    <p>
+      Barney's technical interests are broad rather than being limited
+      to a single programming ecosystem.
+    </p>
+
+    <p>
+      <span class="classification">C++</span>
+      <span class="classification">Python</span>
+      <span class="classification">Rust</span>
+      <span class="classification">JavaScript</span>
+      <span class="classification">TypeScript</span>
+      <span class="classification">HTML</span>
+      <span class="classification">Linux</span>
+      <span class="classification">Networking</span>
+      <span class="classification">Cybersecurity</span>
+      <span class="classification">Self-Hosting</span>
+      <span class="classification">Privacy Engineering</span>
+    </p>
+
+    <ul>
+      <li>Software development and experimentation</li>
+      <li>Backend-oriented programming</li>
+      <li>Linux administration and configuration</li>
+      <li>Networking and infrastructure</li>
+      <li>Web development</li>
+      <li>Automation and scripting</li>
+      <li>Code auditing and security analysis</li>
+      <li>Privacy-oriented software configuration</li>
+      <li>Virtualization and system isolation</li>
+      <li>Self-hosted services</li>
+    </ul>
+  </section>
+
+
+  <!-- =========================
+       PROGRAMMING STYLE
+  ========================== -->
+
+  <section>
+    <h2>Development Philosophy</h2>
+
+    <ul>
+      <li>Prefers readable and understandable implementations</li>
+      <li>Strong preference for simple, self-contained systems</li>
+      <li>Minimizes unnecessary dependencies and abstraction</li>
+      <li>Prefers understanding the underlying system rather than hiding it behind frameworks</li>
+      <li>Enjoys experimentation over following convention for its own sake</li>
+      <li>Values practical functionality and control</li>
+      <li>Frequently evaluates systems from a security perspective</li>
+      <li>Comfortable experimenting with unconventional approaches</li>
+    </ul>
+  </section>
+
+
+  <!-- =========================
+       SECURITY
+  ========================== -->
+
+  <section>
+    <h2>Security & Privacy</h2>
+
+    <p>
+      Security is a significant part of Barney's technical interests,
+      particularly around defensive configuration, privacy, code
+      analysis, and understanding how systems fail.
+    </p>
+
+    <ul>
+      <li>Cybersecurity research and experimentation</li>
+      <li>AI-generated code security review</li>
+      <li>Code auditing and vulnerability analysis</li>
+      <li>Network security</li>
+      <li>Browser privacy and hardening</li>
+      <li>Encrypted storage</li>
+      <li>Authentication security</li>
+      <li>Virtualization and sandboxing</li>
+      <li>Self-hosted privacy infrastructure</li>
+      <li>Security-focused operating-system configuration</li>
+    </ul>
+
+    <div class="risk">
+      <strong>Security Interest:</strong>
+      <span class="risk-moderate">HIGH</span>
+
+      <br>
+
+      <span class="muted">
+        Classification reflects technical interest and activity,
+        not a determination of malicious intent.
+      </span>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       OPERATING SYSTEMS
+  ========================== -->
+
+  <section>
+    <h2>Operating Systems & Systems Environment</h2>
+
+    <ul>
+      <li>Windows</li>
+      <li>Linux</li>
+      <li>Debian-based distributions</li>
+      <li>Ubuntu-based environments</li>
+      <li>Virtual machines and isolated environments</li>
+      <li>Self-hosted Linux services</li>
+    </ul>
+
+    <p>
+      The subject demonstrates substantial interest in operating-system
+      behavior, configuration, package management, hardware compatibility,
+      filesystem security, and system isolation.
+    </p>
+
+    <div class="redacted">
+      ENVIRONMENT-SPECIFIC DETAILS WITHHELD
+    </div>
+
+    <p class="muted">
+      Detailed environmental information is intentionally excluded from
+      the public profile where it would provide unnecessary operational
+      or identifying information.
+    </p>
+  </section>
+
+
+  <!-- =========================
+       INFRASTRUCTURE
+  ========================== -->
+
+  <section>
+    <h2>Infrastructure & Self-Hosting</h2>
+
+    <ul>
+      <li>Local self-hosted services</li>
+      <li>Private search infrastructure</li>
+      <li>Network-level filtering</li>
+      <li>DNS security and privacy configuration</li>
+      <li>Encrypted storage</li>
+      <li>Local backup infrastructure</li>
+      <li>Virtualized services</li>
+      <li>Isolated server environments</li>
+    </ul>
+
+    <p>
+      Infrastructure experimentation is generally oriented toward
+      privacy, control, learning, and reducing unnecessary dependence
+      on third-party services.
+    </p>
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================== -->
+
+  <section>
+    <h2>Projects & Organizations</h2>
+
+    <h3>Krynet</h3>
+
+    <p>
+      Barney is associated with Krynet, a privacy-focused communication
+      project centered around secure messaging, voice communication,
+      authentication, and privacy-oriented infrastructure.
+    </p>
+
+    <ul>
+      <li>Privacy-focused communication technology</li>
+      <li>End-to-end encrypted communication concepts</li>
+      <li>Security architecture</li>
+      <li>Backend and infrastructure development</li>
+      <li>Cross-platform software</li>
+    </ul>
+
+    <h3>Independent Projects</h3>
+
+    <ul>
+      <li>Roblox development and experimentation</li>
+      <li>Web applications and utilities</li>
+      <li>Security tooling and experiments</li>
+      <li>Self-hosted infrastructure</li>
+      <li>Operating-system experiments</li>
+      <li>Automation projects</li>
+    </ul>
+  </section>
+
+
+  <!-- =========================
+       ROBLOX
+  ========================== -->
+
+  <section>
+    <h2>Roblox Background</h2>
+
+    <p>
+      Roblox represents an earlier and continuing part of Barney's
+      development history.
+    </p>
+
+    <ul>
+      <li>Game development</li>
+      <li>Lua scripting</li>
+      <li>Asset experimentation</li>
+      <li>Game-system modification</li>
+      <li>Script analysis</li>
+      <li>Independent project development</li>
+    </ul>
+
+    <p class="muted">
+      Roblox development served as an entry point into broader
+      programming and software experimentation.
+    </p>
+  </section>
+
+
+  <!-- =========================
+       WORKING STYLE
+  ========================== -->
+
+  <section>
+    <h2>Working Style</h2>
+
+    <ul>
+      <li>Highly independent workflow</li>
+      <li>Hands-on experimentation</li>
+      <li>Backend and systems-oriented thinking</li>
+      <li>Strong preference for technical control</li>
+      <li>Frequently investigates problems at the system level</li>
+      <li>Comfortable learning through experimentation</li>
+      <li>Willing to discard conventional approaches when they are unnecessary</li>
+      <li>Strong interest in understanding how software actually works</li>
+    </ul>
+  </section>
+
+
+  <!-- =========================
+       ONLINE PRESENCE
+  ========================== -->
+
+  <section>
+    <h2>Public Online Presence</h2>
+
+    <ul>
+      <li>Developer-oriented online identity</li>
+      <li>Programming and technical project activity</li>
+      <li>Roblox-related history</li>
+      <li>Open-source and software-related activity</li>
+      <li>Security and privacy research interests</li>
+    </ul>
+
+    <p class="muted">
+      Specific account identifiers and personal information are omitted
+      unless they are intentionally maintained as public developer
+      identities.
+    </p>
+
+    <div class="risk">
+      <strong>Public Exposure:</strong>
+      <span class="risk-moderate">MODERATE</span>
+      <br>
+      <strong>Identity Continuity:</strong>
+      <span class="risk-moderate">MODERATE</span>
+    </div>
+  </section>
+
+
+  <!-- =========================
+       PROFILE CLASSIFICATION
+  ========================== -->
+
+  <section>
+    <h2>Profile Classification</h2>
+
+    <p>
+      <span class="classification">Independent Developer</span>
+      <span class="classification">Systems Enthusiast</span>
+      <span class="classification">Backend-Oriented</span>
+      <span class="classification">Linux User</span>
+      <span class="classification">Security Researcher</span>
+      <span class="classification">Privacy-Oriented</span>
+      <span class="classification">Roblox Developer</span>
+      <span class="classification">Self-Hosted Infrastructure</span>
+    </p>
+
+    <p>
+      The overall profile is best characterized as an independent,
+      systems-oriented developer whose interests have expanded from
+      game development into programming, infrastructure, privacy,
+      and cybersecurity.
+    </p>
+  </section>
+
+
+  <!-- =========================
+       METHODOLOGY
+  ========================== -->
+
+  <section>
+    <h2>Assessment Methodology</h2>
+
+    <p>
+      This profile separates factual information from analytical
+      interpretation. Technical classifications describe observable
+      interests and activities rather than hidden intent or personality.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Documented:</strong>
+        Supported by available profile or project information.
+      </li>
+
+      <li>
+        <strong>Self-Reported:</strong>
+        Information provided by the subject.
+      </li>
+
+      <li>
+        <strong>Observed:</strong>
+        Characteristics inferred from documented activity.
+      </li>
+
+      <li>
+        <strong>Assessment:</strong>
+        Analytical interpretation of available information.
+      </li>
+
+      <li>
+        <strong>Unverified:</strong>
+        Claims without sufficient supporting evidence.
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- =========================
+       FINAL SUMMARY
+  ========================== -->
+
+  <section>
+    <h2>Final WHOIS Summary</h2>
+
+    <p>
+      BarneyTheKid7 is an independent developer identity with a
+      background rooted in Roblox development and experimentation.
+      The technical scope has expanded into general software
+      development, Linux, infrastructure, privacy, networking,
+      self-hosting, and cybersecurity.
+    </p>
+
+    <p>
+      The strongest characteristics of the profile are independence,
+      systems-level curiosity, experimentation, and an emphasis on
+      understanding and controlling the underlying technology.
+    </p>
+
+    <p>
+      Rather than fitting exclusively into a game-development or
+      conventional web-development category, the profile spans
+      programming, operating systems, infrastructure, security,
+      privacy, and experimental software development.
+    </p>
+
+    <div class="risk">
+      <strong>Overall Technical Classification:</strong>
+      <span class="risk-moderate">HIGH TECHNICAL INTEREST</span>
+      <br>
+      <strong>Public Identity Exposure:</strong>
+      <span class="risk-moderate">MODERATE</span>
+      <br>
+      <strong>Current Profile Status:</strong>
+      <span class="risk-low">ACTIVE</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  WHOIS Report • BarneyTheKid7 • Developer / Technical Profile
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
 </html>
